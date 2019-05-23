@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Element } from "react-scroll";
 import styled from "styled-components";
 import profileImg from "../assets/profile.jpg";
+import Zoom from "react-reveal/Zoom";
 import Flip from "react-reveal/Flip";
 
 class About extends Component {
@@ -14,7 +15,7 @@ class About extends Component {
       <Element name="About">
         <AboutWrapper>
           <ContentWrapper>
-            <h3>About Me</h3>
+              <h3>About Me</h3>
             <Description>
               <ProfileImg src={profileImg} alt="profile" />
               <TextContainer>
@@ -37,6 +38,7 @@ class About extends Component {
 export default About;
 
 const AboutWrapper = styled.div`
+  perspective: 500px;
   @import url("https://fonts.googleapis.com/css?family=Signika&display=swap");
   font-family: "Signika", sans-serif;
   background: white;
@@ -58,6 +60,11 @@ const ProfileImg = styled.img`
   border-radius: 50%;
   width: 300px;
   height: 300px;
+  overflow: hidden;
+  transition: transform 1s;
+  &:hover {
+    transform: scale(1.2) rotate(9deg);
+  }
 `;
 
 const Description = styled.div`

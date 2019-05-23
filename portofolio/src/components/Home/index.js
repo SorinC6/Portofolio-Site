@@ -4,6 +4,13 @@ import { Element, scroller } from "react-scroll";
 import Particles from "../Particles/index";
 
 class Home extends Component {
+  scrollToAbout = () => {
+    scroller.scrollTo("About", {
+      duration: 500,
+      delay: 1,
+      smooth: true
+    });
+  };
   render() {
     return (
       <Element name="Home">
@@ -12,7 +19,9 @@ class Home extends Component {
           <TextWrapper>
             <NameWrapper>Chis Sorin</NameWrapper>
             <h2>Full Stack Developer</h2>
-            <ButtonWrapper>Click For More</ButtonWrapper>
+            <ButtonWrapper onClick={this.scrollToAbout}>
+              Click For More
+            </ButtonWrapper>
           </TextWrapper>
         </HomeWrapper>
       </Element>
@@ -77,7 +86,7 @@ const ButtonWrapper = styled.a`
   text-decoration: none;
   color: white;
   font-family: sans-serif;
-  font-size: 40px;
+  font-size: 30px;
   border: 3px solid white;
   border-radius: 10px;
   padding: 20px 40px;

@@ -40,12 +40,12 @@ class Navigation extends Component {
             </CostumLink>
             <CostumLink
               activeClass="active"
-              to=""
+              to="Projects"
               spy={true}
               smooth={true}
               duration={500}
             >
-              Contact
+              Projects
             </CostumLink>
           </NavContainer>
         </NavWrapper>

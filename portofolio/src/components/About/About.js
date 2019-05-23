@@ -27,6 +27,7 @@ export default About;
 const AboutWrapper = styled.div`
   background: darkgoldenrod;
   padding: 100px 50px;
+  height: 1000px;
 `;
 
 const ContentWrapper = styled.div`

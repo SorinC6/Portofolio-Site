@@ -28,9 +28,30 @@ const HomeWrapper = styled.div`
 `;
 
 const TextWrapper = styled.div`
+  @import url("https://fonts.googleapis.com/css?family=Monda|Special+Elite&display=swap");
+  font-family: "Special Elite", cursive;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
   top: 30%;
+
+  h1 {
+    margin: 30px;
+    font-size: 55px;
+    letter-spacing: 22px;
+    font-weight: bold;
+  }
+  h2 {
+    margin: 10px;
+    font-size: 40px;
+    letter-spacing: 10px;
+    color: darkgray;
+  }
+
+  button {
+    padding: 10px 20px;
+    margin: 20px;
+    font-size: 20px;
+  }
 `;

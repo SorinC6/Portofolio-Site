@@ -68,7 +68,7 @@ export default Navigation;
 const NavWrapper = styled.div`
   max-width: 100%;
   height: 80px;
-  background: darkorchid;
+  background: #FFC21C;
 `;
 
 const NavContainer = styled.div`

@@ -16,7 +16,12 @@ class About extends Component {
             <h3>About Me</h3>
             <Description>
               <ProfileImg src={profileImg} alt="profile" />
-              <p>description, resume here</p>
+              <TextContainer>
+                Enthusiast programmer, passionate about clean and organized
+                code. I aim to know and work with the newest fullstack web
+                development technologies.
+                <button>RESUME HERE</button>
+              </TextContainer>
             </Description>
             <p>What I build</p>
           </ContentWrapper>
@@ -31,9 +36,8 @@ export default About;
 const AboutWrapper = styled.div`
   @import url("https://fonts.googleapis.com/css?family=Signika&display=swap");
   font-family: "Signika", sans-serif;
-  background: darkgoldenrod;
+  background: white;
   padding: 100px 50px;
-  height: 1000px;
 
   h3 {
     font-size: 30px;
@@ -58,4 +62,9 @@ const Description = styled.div`
   align-items: center;
   width: 60%;
   justify-content: space-between;
+`;
+
+const TextContainer = styled.p`
+  max-width: 55%;
+  font-size: 20px;
 `;

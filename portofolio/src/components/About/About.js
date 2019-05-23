@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Element } from "react-scroll";
 import styled from "styled-components";
 import profileImg from "../assets/profile.jpg";
+import Flip from "react-reveal/Flip";
 
 class About extends Component {
   state = {
@@ -17,10 +18,12 @@ class About extends Component {
             <Description>
               <ProfileImg src={profileImg} alt="profile" />
               <TextContainer>
-                Enthusiast programmer, passionate about clean and organized
-                code. I aim to know and work with the newest fullstack web
-                development technologies.
-                <button>RESUME HERE</button>
+                <Flip left>
+                  Enthusiast programmer, passionate about clean and organized
+                  code. I aim to know and work with the newest fullstack web
+                  development technologies.
+                  <button>RESUME HERE</button>
+                </Flip>
               </TextContainer>
             </Description>
             <p>What I build</p>

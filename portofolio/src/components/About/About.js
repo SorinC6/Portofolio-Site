@@ -3,6 +3,7 @@ import { Element } from "react-scroll";
 import styled from "styled-components";
 import profileImg from "../assets/profile.jpg";
 import Flip from "react-reveal/Flip";
+import Icon from "./Icon";
 
 class About extends Component {
   state = {
@@ -28,7 +29,18 @@ class About extends Component {
                 <ResumeButton>RESUME HERE</ResumeButton>
               </TextContainer>
             </Description>
-            <p>What I build</p>
+            <BuildWrapper>
+              <TextSwitch>
+                I Love <span />
+              </TextSwitch>
+              <IconWrapper>
+                <Icon cls="fas fa-mobile-alt" name="Responsive" />
+                <Icon cls="fas fa-tachometer-alt" name="Fast" />
+                <Icon cls="fas fa-user-shield" name="Secure" />
+                <Icon cls="fas fa-rocket" name="Scalable" />
+                <Icon />
+              </IconWrapper>
+            </BuildWrapper>
           </ContentWrapper>
         </AboutWrapper>
       </Element>
@@ -111,4 +123,37 @@ const ResumeButton = styled.a`
       transform: rotate(10deg);
     }
   }
+`;
+
+const TextSwitch = styled.h1`
+  text-align: center;
+  font-size: 20px;
+  span:before {
+    content: "TRANSITION";
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkslateblue;
+    animation: words 6s infinite;
+  }
+  @keyframes words {
+    0% {
+      content: "React";
+    }
+    50% {
+      content: "Node";
+    }
+    100% {
+      content: "Animation";
+    }
+  }
+`;
+
+const BuildWrapper = styled.div`
+  width: 100%;
+`;
+
+const IconWrapper = styled.div`
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
 `;

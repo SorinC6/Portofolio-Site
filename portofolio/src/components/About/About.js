@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Element } from "react-scroll";
 import styled from "styled-components";
 import profileImg from "../assets/profile.jpg";
-import Zoom from "react-reveal/Zoom";
 import Flip from "react-reveal/Flip";
 
 class About extends Component {
@@ -15,16 +14,18 @@ class About extends Component {
       <Element name="About">
         <AboutWrapper>
           <ContentWrapper>
-              <h3>About Me</h3>
+            <h3>About Me</h3>
             <Description>
               <ProfileImg src={profileImg} alt="profile" />
               <TextContainer>
                 <Flip left>
-                  Enthusiast programmer, passionate about clean and organized
-                  code. I aim to know and work with the newest fullstack web
-                  development technologies.
-                  <button>RESUME HERE</button>
+                  <p>
+                    Enthusiast programmer, passionate about clean and organized
+                    code. I aim to know and work with the newest fullstack web
+                    development technologies.
+                  </p>
                 </Flip>
+                <ResumeButton>RESUME HERE</ResumeButton>
               </TextContainer>
             </Description>
             <p>What I build</p>
@@ -38,7 +39,6 @@ class About extends Component {
 export default About;
 
 const AboutWrapper = styled.div`
-  perspective: 500px;
   @import url("https://fonts.googleapis.com/css?family=Signika&display=swap");
   font-family: "Signika", sans-serif;
   background: white;
@@ -59,7 +59,7 @@ const ContentWrapper = styled.div`
 const ProfileImg = styled.img`
   border-radius: 50%;
   width: 300px;
-  height: 300px;
+  height: auto;
   overflow: hidden;
   transition: transform 1s;
   &:hover {
@@ -70,11 +70,45 @@ const ProfileImg = styled.img`
 const Description = styled.div`
   display: flex;
   align-items: center;
-  width: 60%;
+  width: 80%;
   justify-content: space-between;
 `;
 
 const TextContainer = styled.p`
+  display: flex;
+  flex-direction: column;
   max-width: 55%;
+  align-items: center;
+  p {
+    font-size: 20px;
+    padding: 10px;
+  }
+`;
+
+const ResumeButton = styled.a`
+  color: black;
+  font-family: sans-serif;
+  margin-top: 10px;
+  text-decoration: none;
   font-size: 20px;
+  border: 3px solid black;
+  padding: 10px 20px;
+  transition: all 0.5s;
+  &:hover {
+    border: 3px solid darkred;
+    color: red;
+    background: lightslategray;
+    animation: shake 0.4s linear 1;
+  }
+  @keyframes shake {
+    33% {
+      transform: rotate(10deg);
+    }
+    66% {
+      transform: rotate(-10deg);
+    }
+    100% {
+      transform: rotate(10deg);
+    }
+  }
 `;

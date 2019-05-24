@@ -34,11 +34,11 @@ class About extends Component {
                 I Love <span />
               </TextSwitch>
               <IconWrapper>
-                <Icon cls="fas fa-mobile-alt" name="Responsive" />
-                <Icon cls="fas fa-tachometer-alt" name="Fast" />
-                <Icon cls="fas fa-user-shield" name="Secure" />
-                <Icon cls="fas fa-rocket" name="Scalable" />
-                <Icon />
+                <Icon cls="fas fa-mobile-alt" name="Responsive" description="Blazing fast load times & lag-free interaction"/>
+                <Icon cls="fas fa-hourglass-start" name="Fast" description="Blazing fast load times & lag-free interaction"/>
+                <Icon cls="fas fa-user-shield" name="Secure" description="Blazing fast load times & lag-free interaction"/>
+                <Icon cls="fas fa-rocket" name="Scalable" description="Blazing fast load times & lag-free interaction"/>
+                <Icon cls="fas fa-star-of-life" name="...." description="Blazing fast load times & lag-free interaction"/>
               </IconWrapper>
             </BuildWrapper>
           </ContentWrapper>
@@ -71,8 +71,6 @@ const ContentWrapper = styled.div`
 const ProfileImg = styled.img`
   border-radius: 50%;
   width: 300px;
-  height: auto;
-  overflow: hidden;
   transition: transform 1s;
   &:hover {
     transform: scale(1.2) rotate(9deg);
@@ -125,7 +123,13 @@ const ResumeButton = styled.a`
   }
 `;
 
+const BuildWrapper = styled.div`
+  width: 100%;
+  margin-top: 50px;
+`;
+
 const TextSwitch = styled.h1`
+  margin-bottom: 70px;
   text-align: center;
   font-size: 20px;
   span:before {
@@ -148,12 +152,11 @@ const TextSwitch = styled.h1`
   }
 `;
 
-const BuildWrapper = styled.div`
-  width: 100%;
-`;
-
 const IconWrapper = styled.div`
+  margin: 60px;
   display: flex;
+  flex-wrap: wrap;
   width: 90%;
   justify-content: space-between;
+  margin: 0 auto;
 `;

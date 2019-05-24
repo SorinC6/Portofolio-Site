@@ -34,14 +34,35 @@ class About extends Component {
                 I Love <span />
               </TextSwitch>
               <IconWrapper>
-                <Icon cls="fas fa-mobile-alt" name="Responsive" description="Blazing fast load times & lag-free interaction"/>
-                <Icon cls="fas fa-hourglass-start" name="Fast" description="Blazing fast load times & lag-free interaction"/>
-                <Icon cls="fas fa-user-shield" name="Secure" description="Blazing fast load times & lag-free interaction"/>
-                <Icon cls="fas fa-rocket" name="Scalable" description="Blazing fast load times & lag-free interaction"/>
-                <Icon cls="fas fa-star-of-life" name="...." description="Blazing fast load times & lag-free interaction"/>
+                <Icon
+                  cls="fas fa-mobile-alt"
+                  name="Responsive"
+                  description="Blazing fast load times & lag-free interaction"
+                />
+                <Icon
+                  cls="fas fa-hourglass-start"
+                  name="Fast"
+                  description="Blazing fast load times & lag-free interaction"
+                />
+                <Icon
+                  cls="fas fa-user-shield"
+                  name="Secure"
+                  description="Blazing fast load times & lag-free interaction"
+                />
+                <Icon
+                  cls="fas fa-rocket"
+                  name="Scalable"
+                  description="Blazing fast load times & lag-free interaction"
+                />
+                <Icon
+                  cls="fas fa-star-of-life"
+                  name="...."
+                  description="Blazing fast load times & lag-free interaction"
+                />
               </IconWrapper>
             </BuildWrapper>
           </ContentWrapper>
+          <PDF />
         </AboutWrapper>
       </Element>
     );

@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Element } from "react-scroll";
+import ProjectCard from "./ProjectCard";
+import testImg from "../assets/test.png";
 
 const Projects = () => {
   return (
@@ -9,12 +11,31 @@ const Projects = () => {
         <h4>Portofolio</h4>
         <h5>Some of my Work so far</h5>
         <CardsWrapper>
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>3</div>
-          <div>3</div>
-          <div>3</div>
+          <ProjectCard
+            img={testImg}
+            title="Book Title"
+            description="lorem ipsus lorem ipsus lorem ipsuslorem ipsuslorem ipsus lorem ipsuslorem ipsus"
+          />
+          <ProjectCard
+            img={testImg}
+            title="Book Title"
+            description="lorem ipsus lorem ipsus lorem ipsuslorem ipsuslorem ipsus lorem ipsuslorem ipsus"
+          />
+          <ProjectCard
+            img={testImg}
+            title="Book Title"
+            description="lorem ipsus lorem ipsus lorem ipsuslorem ipsuslorem ipsus lorem ipsuslorem ipsus"
+          />
+          <ProjectCard
+            img={testImg}
+            title="Book Title"
+            description="lorem ipsus lorem ipsus lorem ipsuslorem ipsuslorem ipsus lorem ipsuslorem ipsus"
+          />
+          <ProjectCard
+            img={testImg}
+            title="Book Title"
+            description="lorem ipsus lorem ipsus lorem ipsuslorem ipsuslorem ipsus lorem ipsuslorem ipsus"
+          />
         </CardsWrapper>
       </ProjectsWrapper>
     </Element>
@@ -31,6 +52,8 @@ const ProjectsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 2;
+
   h4 {
     font-size: 40px;
   }
@@ -42,16 +65,12 @@ const ProjectsWrapper = styled.div`
 
 const CardsWrapper = styled.div`
   display: flex;
-  max-width: 90%;
+  max-width: 80%;
   margin: 50px auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 
   div {
-    height: 200px;
-    width: 200px;
-    background-color: red;
-    margin: 20px;
   }
 `;

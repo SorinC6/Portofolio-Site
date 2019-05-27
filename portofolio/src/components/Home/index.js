@@ -1,5 +1,4 @@
-import React, { Component, Fragment } from "react";
-import styled from "styled-components";
+import React, { Component } from "react";
 import { Element, scroller } from "react-scroll";
 import Particles from "../Particles/index";
 import Flip from "react-reveal/Flip";

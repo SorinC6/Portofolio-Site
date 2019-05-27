@@ -34,7 +34,7 @@ export const Description = styled.div`
   justify-content: space-between;
 `;
 
-export const TextContainer = styled.p`
+export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 55%;

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Element, Link, scroller } from "react-scroll";
+import { Element, Link } from "react-scroll";
 import styled from "styled-components";
 
 class Navigation extends Component {

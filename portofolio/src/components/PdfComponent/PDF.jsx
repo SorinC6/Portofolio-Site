@@ -3,7 +3,7 @@ import { PDFObject } from "react-pdfobject";
 import resume from "../assets/Resume.pdf";
 import ReactModal from "react-modal";
 import styled from "styled-components";
-
+import Bounce from "react-reveal/Bounce";
 const PDF = ({ trigger, close }) => {
   const customStyles = {
     content: {
@@ -16,15 +16,17 @@ const PDF = ({ trigger, close }) => {
     }
   };
   return (
-    <ReactModal
-      isOpen={trigger}
-      onRequestClose={close}
-      style={{ overlay, content }}
-      ariaHideApp={false}
-    >
-      <PDFObject url={resume} height="1080px" id="pdf-test" />
-      <Button onClick={close}>Cancel</Button>
-    </ReactModal>
+    <Bounce left>
+      <ReactModal
+        isOpen={trigger}
+        onRequestClose={close}
+        style={{ overlay, content }}
+        ariaHideApp={false}
+      >
+        <PDFObject url={resume} height="1080px" id="pdf-test" />
+        <Button onClick={close}>Cancel</Button>
+      </ReactModal>
+    </Bounce>
   );
 };
 
@@ -35,14 +37,15 @@ const overlay = {
   top: 0,
   left: 0,
   right: 0,
-  bottom: 0
+  bottom: 0,
+  zIndex: 300
 };
 
 const content = {
   position: "absolute",
-  maxWidth: "700px",
+  maxWidth: "800px",
   margin: "2rem auto 0 auto",
-  padding: "2rem 3rem",
+  padding: "2rem 4rem",
   borderRadius: "0.5rem",
   border: "1px solid #161c24",
   background: "darkred",
@@ -59,7 +62,8 @@ const Button = styled.button`
   width: 100%;
   height: 4rem;
   border-radius: 0.3rem;
-  color: #29f3db;
+  color: white;
+  font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   outline: none;

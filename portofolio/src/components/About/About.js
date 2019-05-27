@@ -4,16 +4,26 @@ import styled from "styled-components";
 import profileImg from "../assets/profile.jpg";
 import Flip from "react-reveal/Flip";
 import Icon from "./Icon";
+import PDF from "../PdfComponent/PDF";
 
 class About extends Component {
   state = {
     modal: false
   };
 
+  toggleModal = () => {
+    this.setState({ modal: !this.state.modal });
+  };
+
+  closeModal = () => {
+    this.setState({ modal: false });
+  };
+
   render() {
     return (
       <Element name="About">
         <AboutWrapper>
+          <PDF trigger={this.state.modal} close={this.closeModal} />
           <ContentWrapper>
             <h3>About Me</h3>
             <Description>
@@ -26,7 +36,9 @@ class About extends Component {
                     development technologies.
                   </p>
                 </Flip>
-                <ResumeButton>RESUME HERE</ResumeButton>
+                <ResumeButton onClick={this.toggleModal}>
+                  RESUME HERE
+                </ResumeButton>
               </TextContainer>
             </Description>
             <BuildWrapper>

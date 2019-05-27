@@ -122,7 +122,7 @@ const CostumLink = styled(Link)`
 
   &.active {
     color: red;
-    background-color: #FAFAD2;
+    background-color: #fafad2;
     font-size: 16px;
     padding: 16px;
     border-radius: 40%;

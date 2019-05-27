@@ -16,17 +16,17 @@ const PDF = ({ trigger, close }) => {
     }
   };
   return (
-    <Bounce left>
-      <ReactModal
-        isOpen={trigger}
-        onRequestClose={close}
-        style={{ overlay, content }}
-        ariaHideApp={false}
-      >
+    <ReactModal
+      isOpen={trigger}
+      onRequestClose={close}
+      style={{ overlay, content }}
+      ariaHideApp={false}
+    >
+      <Bounce left>
         <PDFObject url={resume} height="1080px" id="pdf-test" />
         <Button onClick={close}>Cancel</Button>
-      </ReactModal>
-    </Bounce>
+      </Bounce>
+    </ReactModal>
   );
 };
 

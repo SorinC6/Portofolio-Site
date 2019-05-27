@@ -69,6 +69,9 @@ const NavWrapper = styled.div`
   max-width: 100%;
   height: 80px;
   background: #ffc21c;
+  border-bottom: 3px dotted #e5e5e5;
+  box-shadow: inset 0 -1px 0 0 #e5e5e5, inset 0 1px 0 0 #e5e5e5,
+    0 1px 0 0 #e5e5e5, 0 -1px 0;
 `;
 
 const NavContainer = styled.div`
@@ -78,16 +81,50 @@ const NavContainer = styled.div`
   align-items: center;
   height: 100%;
   margin: 0 auto;
+  position: relative;
 `;
 
 const CostumLink = styled(Link)`
   color: blue;
   padding: 10px;
   cursor: pointer;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3%;
+    background-color: red;
+    transform: scaleX(0);
+    transition: all 0.5s;
+    transform-origin: left;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4%;
+    background-color: red;
+    transform: scaleX(0);
+    transition: all 0.5s;
+    transform-origin: right;
+  }
+  &:hover:before {
+    transform: scaleX(1);
+  }
+  &:hover:after {
+    transform: scaleX(1);
+  }
+
   &.active {
     color: red;
-    background-color: #6ed3cf;
+    background-color: #FAFAD2;
     font-size: 16px;
-    border-radius: 50%;
+    padding: 16px;
+    border-radius: 40%;
   }
 `;

@@ -62,7 +62,6 @@ class About extends Component {
               </IconWrapper>
             </BuildWrapper>
           </ContentWrapper>
-          <PDF />
         </AboutWrapper>
       </Element>
     );

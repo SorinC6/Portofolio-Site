@@ -1,26 +1,26 @@
 import React from "react";
-import { PDFObject } from "react-pdfobject";
-import resume from "../assets/Resume.pdf";
 import ReactModal from "react-modal";
 import styled from "styled-components";
-import Bounce from "react-reveal/Bounce";
-const PDF = ({ trigger, close }) => {
+
+const ModalComponent = ({ isOpen, close, img, title, description }) => {
   return (
     <ReactModal
-      isOpen={trigger}
+      isOpen={isOpen}
       onRequestClose={close}
       style={{ overlay, content }}
       ariaHideApp={false}
     >
-      <Bounce left>
-        <PDFObject url={resume} height="1080px" id="pdf-test" />
+      <ModalContent>
+        <img src={img} alt="imagine" />
+        <h4>{title}sss</h4>
+        <p>{description}ssss</p>
         <Button onClick={close}>Cancel</Button>
-      </Bounce>
+      </ModalContent>
     </ReactModal>
   );
 };
 
-export default PDF;
+export default ModalComponent;
 
 const overlay = {
   position: "fixed",
@@ -33,9 +33,9 @@ const overlay = {
 
 const content = {
   position: "absolute",
-  maxWidth: "800px",
-  margin: "2rem auto 0 auto",
-  padding: "2rem 4rem",
+  maxWidth: "300px",
+  margin: "0 auto",
+  padding: "1rem 1rem",
   borderRadius: "0.5rem",
   border: "1px solid #161c24",
   background: "darkred",
@@ -64,5 +64,14 @@ const Button = styled.button`
   user-select: none;
   &:hover {
     background: #85bdbf;
+  }
+`;
+
+const ModalContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    width: 200px;
   }
 `;

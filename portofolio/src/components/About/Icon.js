@@ -21,6 +21,8 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   max-width: 120px;
+  z-index: 3000;
+  position: relative;
   i {
     font-size: 60px;
     color: darkkhaki;

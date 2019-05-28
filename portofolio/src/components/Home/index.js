@@ -6,7 +6,9 @@ import {
   HomeWrapper,
   TextWrapper,
   NameWrapper,
-  ButtonWrapper
+  ButtonWrapper,
+  SocialWrapper,
+  AWrapper
 } from "./HomeStyle";
 
 class Home extends Component {
@@ -31,6 +33,17 @@ class Home extends Component {
               Click For More
             </ButtonWrapper>
           </TextWrapper>
+          <SocialWrapper>
+            <AWrapper href="https://github.com/SorinC6" target="_blank">
+              <i className="fab fa-github" />
+            </AWrapper>
+            <AWrapper
+              href="https://www.linkedin.com/in/chis-sorin-993940130/"
+              target="_blank"
+            >
+              <i className="fab fa-linkedin" />
+            </AWrapper>
+          </SocialWrapper>
         </HomeWrapper>
       </Element>
     );

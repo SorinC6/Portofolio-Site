@@ -53,19 +53,14 @@ class Contact extends Component {
             <button type="submit">Send Message</button>
           </Form>
           <SocialWrapper>
-            <AWrapper
-              href="https://github.com/crypto-jones"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fab fa-github" />
+            <AWrapper href="https://github.com/SorinC6" target="_blank">
+              <i className="fab fa-github" />
             </AWrapper>
             <AWrapper
-              href="https://github.com/crypto-jones"
+              href="https://www.linkedin.com/in/chis-sorin-993940130/"
               target="_blank"
-              rel="noopener noreferrer"
             >
-              <i class="fab fa-linkedin" />
+              <i className="fab fa-linkedin" />
             </AWrapper>
           </SocialWrapper>
           <p>Chis Sorin Portofolo Site</p>
@@ -106,10 +101,12 @@ const Form = styled.form`
     font-size: 16px;
     margin: 10px;
     border-radius: 10px;
+    outline: none;
   }
   input:nth-of-type(3) {
     height: 150px;
     width: 60%;
+    align: top;
   }
 
   button {

@@ -94,3 +94,23 @@ export const ButtonWrapper = styled.a`
     }
   }
 `;
+
+export const SocialWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  width: 140px;
+  position: relative;
+  z-index: 1;
+`;
+
+export const AWrapper = styled.a`
+  font-size: 60px;
+  padding: 10px 20px;
+  margin: 0 20px;
+  box-shadow: 0 15px 10px #777;
+  margin: 10px;
+  &:hover {
+    cursor: pointer;
+  }
+`;

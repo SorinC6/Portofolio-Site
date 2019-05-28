@@ -70,7 +70,8 @@ const CardsWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-
+  position: relative;
+  z-index: 0;
   div {
   }
 `;

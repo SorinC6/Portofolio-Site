@@ -6,14 +6,15 @@ import Navigation from "./components/NavBar/Navigation";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
+import styled from "styled-components";
 
 function App() {
   return (
     <div>
       <Home />
-      <Sticky>
+      <St>
         <Navigation />
-      </Sticky>
+      </St>
       <About />
       <Projects />
       <Contact />
@@ -22,3 +23,9 @@ function App() {
 }
 
 export default App;
+
+const St = styled(Sticky)`
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+`;

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Element, Link } from "react-scroll";
 import styled from "styled-components";
+import LightSpeed from "react-reveal/LightSpeed";
 
 class Navigation extends Component {
   state = {
@@ -18,46 +19,48 @@ class Navigation extends Component {
   render() {
     return (
       <Element name="NavBar">
-        <NavWrapper>
-          <NavContainer>
-            <CostumLink
-              activeClass="active"
-              to="Home"
-              spy={true}
-              smooth={true}
-              duration={500}
-            >
-              Home
-            </CostumLink>
-            <CostumLink
-              activeClass="active"
-              to="About"
-              spy={true}
-              smooth={true}
-              duration={500}
-            >
-              About
-            </CostumLink>
-            <CostumLink
-              activeClass="active"
-              to="Projects"
-              spy={true}
-              smooth={true}
-              duration={500}
-            >
-              Projects
-            </CostumLink>
-            <CostumLink
-              activeClass="active"
-              to="Contact"
-              spy={true}
-              smooth={true}
-              duration={500}
-            >
-              Contact
-            </CostumLink>
-          </NavContainer>
-        </NavWrapper>
+        <LightSpeed cascade>
+          <NavWrapper>
+            <NavContainer>
+              <CostumLink
+                activeClass="active"
+                to="Home"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                Home
+              </CostumLink>
+              <CostumLink
+                activeClass="active"
+                to="About"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                About
+              </CostumLink>
+              <CostumLink
+                activeClass="active"
+                to="Projects"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                Projects
+              </CostumLink>
+              <CostumLink
+                activeClass="active"
+                to="Contact"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                Contact
+              </CostumLink>
+            </NavContainer>
+          </NavWrapper>
+        </LightSpeed>
       </Element>
     );
   }
@@ -72,6 +75,7 @@ const NavWrapper = styled.div`
   border-bottom: 3px dotted #e5e5e5;
   box-shadow: inset 0 -1px 0 0 #e5e5e5, inset 0 1px 0 0 #e5e5e5,
     0 1px 0 0 #e5e5e5, 0 -1px 0;
+  z-index: 200;
 `;
 
 const NavContainer = styled.div`

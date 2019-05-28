@@ -43,7 +43,7 @@ const MainWrapper = styled.div`
   transition: all 0.5s;
   background: rgba(0, 0, 0, 0);
   overflow: hidden;
-  z-index:0;
+  z-index: 0;
   img {
     width: 100%;
     height: auto;
@@ -52,6 +52,7 @@ const MainWrapper = styled.div`
   div {
     max-width: 100%;
     position: absolute;
+    z-index: -1;
     top: 0;
     left: 0;
     height: 100%;

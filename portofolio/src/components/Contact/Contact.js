@@ -106,7 +106,6 @@ const Form = styled.form`
   input:nth-of-type(3) {
     height: 150px;
     width: 60%;
-    align: top;
   }
 
   button {

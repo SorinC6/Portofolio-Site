@@ -10,10 +10,12 @@ const ModalComponent = ({ isOpen, close, img, title, description }) => {
       style={{ overlay, content }}
       ariaHideApp={false}
     >
-      <ModalContent>
-        <img src={img} alt="imagine" />
-        <h4>{title}sss</h4>
-        <p>{description}ssss</p>
+      <ModalContent href="https://goofy-jang-012306.netlify.com/">
+        <a href="https://goofy-jang-012306.netlify.com/">
+          <img src={img} alt="imagine" />
+          <h4>{title}sss</h4>
+          <p>{description}ssss</p>
+        </a>
         <Button onClick={close}>Cancel</Button>
       </ModalContent>
     </ReactModal>
@@ -68,9 +70,13 @@ const Button = styled.button`
 `;
 
 const ModalContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+  }
   img {
     width: 200px;
   }

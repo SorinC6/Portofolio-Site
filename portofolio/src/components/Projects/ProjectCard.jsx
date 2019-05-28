@@ -44,6 +44,7 @@ const MainWrapper = styled.div`
   background: rgba(0, 0, 0, 0);
   overflow: hidden;
   z-index: 0;
+  border-radius: 20px;
   img {
     width: 100%;
     height: auto;
@@ -52,7 +53,6 @@ const MainWrapper = styled.div`
   div {
     max-width: 100%;
     position: absolute;
-    z-index: -1;
     top: 0;
     left: 0;
     height: 100%;
@@ -71,8 +71,8 @@ const MainWrapper = styled.div`
     }
 
     &:hover {
-      opacity: 1;
-      color: lightcoral;
+      opacity: 0.7;
+      color: white;
       background: rgba(0, 0, 0, 0.7);
       cursor: cell;
     }

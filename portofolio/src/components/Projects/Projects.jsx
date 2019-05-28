@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Element } from "react-scroll";
 import ProjectCard from "./ProjectCard";
 import testImg from "../assets/test.png";
+import book from "../assets/book.png";
 
 const Projects = () => {
   return (
@@ -12,9 +13,9 @@ const Projects = () => {
         <h5>Some of my Work so far</h5>
         <CardsWrapper>
           <ProjectCard
-            img={testImg}
-            title="Book Title"
-            description="lorem ipsus lorem ipsus lorem ipsuslorem ipsuslorem ipsus lorem ipsuslorem ipsus"
+            img={book}
+            title="Bookr"
+            description="Pitch: Bookr is your source for all things Text Book. Picture the AirBNB of text books, a social platform for peer reviewed text books. "
           />
           <ProjectCard
             img={testImg}

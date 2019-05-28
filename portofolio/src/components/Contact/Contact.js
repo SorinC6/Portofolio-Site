@@ -52,6 +52,23 @@ class Contact extends Component {
             />
             <button type="submit">Send Message</button>
           </Form>
+          <SocialWrapper>
+            <AWrapper
+              href="https://github.com/crypto-jones"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-github" />
+            </AWrapper>
+            <AWrapper
+              href="https://github.com/crypto-jones"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-linkedin" />
+            </AWrapper>
+          </SocialWrapper>
+          <p>Chis Sorin Portofolo Site</p>
         </ContactWrapper>
       </Element>
     );
@@ -62,14 +79,14 @@ export default Contact;
 
 const ContactWrapper = styled.div`
   background: lightgreen;
-  height: 100vh;
+  height: 800px;
   padding-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  h4 {
-    margin: 0;
+  justify-content: space-between;
+  h3 {
+    margin-top: 80px;
   }
 `;
 
@@ -78,15 +95,21 @@ const Form = styled.form`
   flex-direction: column;
   align-items: center;
   border: 1px solid black;
-  width: 90%;
+  width: 60%;
   margin: 0 auto;
   padding: 20px;
-  background: darkred;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 10px #777;
+
   input {
-    padding: 20px 30px;
-    font-size: 20px;
+    padding: 13px 20px;
+    font-size: 16px;
     margin: 10px;
     border-radius: 10px;
+  }
+  input:nth-of-type(3) {
+    height: 150px;
+    width: 60%;
   }
 
   button {
@@ -94,4 +117,16 @@ const Form = styled.form`
     width: 60%;
     border-radius: 20px;
   }
+`;
+
+const SocialWrapper = styled.div`
+  display: flex;
+  margin-top: 20px;
+`;
+
+const AWrapper = styled.a`
+  font-size: 60px;
+  padding: 10px 20px;
+  margin: 0 20px;
+  box-shadow: 0 15px 10px #777;
 `;

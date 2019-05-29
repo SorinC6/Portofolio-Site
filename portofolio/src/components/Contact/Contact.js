@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Element } from "react-scroll";
+import Slide from "react-reveal/Slide";
 
 class Contact extends Component {
   state = {
@@ -32,12 +33,15 @@ class Contact extends Component {
           <h3>Contact Me</h3>
           <h4>Interest in working thogether?</h4>
           <Form onSubmit={this.sendMessage}>
-            <input
-              placeholder="Name"
-              onChange={this.onChangeHendler}
-              name="name"
-              value={this.state.name}
-            />
+            <Slide top>
+              <input
+                placeholder="Name"
+                onChange={this.onChangeHendler}
+                name="name"
+                value={this.state.name}
+              />
+            </Slide>
+
             <input
               placeholder="Email"
               onChange={this.onChangeHendler}
@@ -63,7 +67,9 @@ class Contact extends Component {
               <i className="fab fa-linkedin" />
             </AWrapper>
           </SocialWrapper>
-          <p>Chis Sorin Portofolo Site</p>
+          <Slide bottom>
+            <p>Chis Sorin Portofolo Site</p>
+          </Slide>
         </ContactWrapper>
       </Element>
     );

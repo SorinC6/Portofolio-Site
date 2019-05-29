@@ -21,8 +21,8 @@ const ModalComponent = ({
       <ModalContent href={link}>
         <a href={link}>
           <img src={img} alt="imagine" />
-          <h4>{title}sss</h4>
-          <p>{description}ssss</p>
+          <h4>{title}</h4>
+          <p>{description}</p>
         </a>
         <SocialWrapper>
           <AWrapper href={gitHubLink} target="_blank">

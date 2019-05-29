@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { Element } from "react-scroll";
 import Slide from "react-reveal/Slide";
+import axios from "axios";
 
 class Contact extends Component {
   state = {
@@ -11,6 +12,16 @@ class Contact extends Component {
   };
   sendMessage = e => {
     e.preventDefault();
+
+    const { name, email, message } = this.state;
+
+    const goodInputsField =
+      name.length > 0 &&
+      email.length > 0 &&
+      email.includes("@") &&
+      email.includes(".") &&
+      message.length > 0;
+
     this.clearInput();
   };
   clearInput = () => {
@@ -52,7 +63,7 @@ class Contact extends Component {
               />
             </Slide>
             <Slide right>
-              <input
+              <textarea
                 placeholder="Message"
                 onChange={this.onChangeHendler}
                 name="message"
@@ -117,9 +128,11 @@ const Form = styled.form`
     border-radius: 10px;
     outline: none;
   }
-  input:nth-of-type(3) {
+  textarea {
     height: 100px;
-    padding: 0;
+    padding: 20px;
+    font-size: 16px;
+    margin-bottom: 10px;
     width: 60%;
   }
 

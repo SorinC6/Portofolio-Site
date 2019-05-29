@@ -22,6 +22,24 @@ class Contact extends Component {
       email.includes(".") &&
       message.length > 0;
 
+    if (goodInputsField) {
+      console.log(name, email, message);
+      try {
+        axios
+          .get(
+            `http://localhost:8888/send-email?recipient=kish.sorin@yahoo.com&sender=${email}&topic=${name}&text=${message}`
+          )
+          .then(() => {
+            alert(
+              `Hey! Thanks for contacting me. I'll get back to you soon as I can.`
+            );
+          })
+          .catch(err => console.log(err));
+      } catch (error) {}
+    } else {
+      alert("Please provide a message");
+    }
+
     this.clearInput();
   };
   clearInput = () => {

@@ -30,43 +30,50 @@ class Contact extends Component {
     return (
       <Element name="Contact">
         <ContactWrapper>
-          <h3>Contact Me</h3>
-          <h4>Interest in working thogether?</h4>
+          <Slide top>
+            <h3>Contact Me</h3>
+            <h4>Interest in working thogether?</h4>
+          </Slide>
+
           <Form onSubmit={this.sendMessage}>
-            <Slide top>
+            <Slide left>
               <input
                 placeholder="Name"
                 onChange={this.onChangeHendler}
                 name="name"
                 value={this.state.name}
               />
-            </Slide>
 
-            <input
-              placeholder="Email"
-              onChange={this.onChangeHendler}
-              name="email"
-              value={this.state.email}
-            />
-            <input
-              placeholder="Message"
-              onChange={this.onChangeHendler}
-              name="message"
-              value={this.state.message}
-            />
-            <button type="submit">Send Message</button>
+              <input
+                placeholder="Email"
+                onChange={this.onChangeHendler}
+                name="email"
+                value={this.state.email}
+              />
+            </Slide>
+            <Slide right>
+              <input
+                placeholder="Message"
+                onChange={this.onChangeHendler}
+                name="message"
+                value={this.state.message}
+              />
+              <button type="submit">Send Message</button>
+            </Slide>
           </Form>
-          <SocialWrapper>
-            <AWrapper href="https://github.com/SorinC6" target="_blank">
-              <i className="fab fa-github" />
-            </AWrapper>
-            <AWrapper
-              href="https://www.linkedin.com/in/chis-sorin-993940130/"
-              target="_blank"
-            >
-              <i className="fab fa-linkedin" />
-            </AWrapper>
-          </SocialWrapper>
+          <Slide bottom>
+            <SocialWrapper>
+              <AWrapper href="https://github.com/SorinC6" target="_blank">
+                <i className="fab fa-github" />
+              </AWrapper>
+              <AWrapper
+                href="https://www.linkedin.com/in/chis-sorin-993940130/"
+                target="_blank"
+              >
+                <i className="fab fa-linkedin" />
+              </AWrapper>
+            </SocialWrapper>
+          </Slide>
           <Slide bottom>
             <p>Chis Sorin Portofolo Site</p>
           </Slide>
@@ -103,6 +110,7 @@ const Form = styled.form`
   box-shadow: 0 15px 10px #777;
 
   input {
+    text-align: justify;
     padding: 13px 20px;
     font-size: 16px;
     margin: 10px;
@@ -110,7 +118,8 @@ const Form = styled.form`
     outline: none;
   }
   input:nth-of-type(3) {
-    height: 150px;
+    height: 100px;
+    padding: 0;
     width: 60%;
   }
 
@@ -118,6 +127,14 @@ const Form = styled.form`
     padding: 20px 30px;
     width: 60%;
     border-radius: 20px;
+    outline: none;
+    font-size: 16px;
+    transition: 1s all;
+    &:hover {
+      color: white;
+      background: darkgreen;
+      cursor: crosshair;
+    }
   }
 `;
 

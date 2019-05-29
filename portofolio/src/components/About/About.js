@@ -59,27 +59,27 @@ class About extends Component {
                 <Icon
                   cls="fas fa-mobile-alt"
                   name="Responsive"
-                  description="Blazing fast load times & lag-free interaction"
+                  description="My layouts will work on any device, big or small."
                 />
                 <Icon
                   cls="fas fa-hourglass-start"
                   name="Fast"
-                  description="Blazing fast load times & lag-free interaction"
+                  description="Fast load times and lag free interaction, my highest priority."
                 />
                 <Icon
                   cls="fas fa-user-shield"
                   name="Secure"
-                  description="Blazing fast load times & lag-free interaction"
+                  description="Unhackable systems architecture"
                 />
                 <Icon
                   cls="fas fa-rocket"
                   name="Scalable"
-                  description="Blazing fast load times & lag-free interaction"
+                  description="Websites don't have to be static, I love making pages come to life."
                 />
                 <Icon
                   cls="fas fa-star-of-life"
-                  name="...."
-                  description="Blazing fast load times & lag-free interaction"
+                  name="Dynamic"
+                  description="I believe in easy to use, intuitive UX/UI."
                 />
               </IconWrapper>
             </BuildWrapper>

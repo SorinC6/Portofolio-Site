@@ -2,7 +2,15 @@ import React from "react";
 import ReactModal from "react-modal";
 import styled from "styled-components";
 
-const ModalComponent = ({ isOpen, close, img, title, description }) => {
+const ModalComponent = ({
+  isOpen,
+  close,
+  img,
+  title,
+  description,
+  link,
+  gitHubLink
+}) => {
   return (
     <ReactModal
       isOpen={isOpen}
@@ -10,10 +18,17 @@ const ModalComponent = ({ isOpen, close, img, title, description }) => {
       style={{ overlay, content }}
       ariaHideApp={false}
     >
-      <ModalContent>
-        <img src={img} alt="imagine" />
-        <h4>{title}sss</h4>
-        <p>{description}ssss</p>
+      <ModalContent href={link}>
+        <a href={link}>
+          <img src={img} alt="imagine" />
+          <h4>{title}</h4>
+          <p>{description}</p>
+        </a>
+        <SocialWrapper>
+          <AWrapper href={gitHubLink} target="_blank">
+            <i className="fab fa-github" />
+          </AWrapper>
+        </SocialWrapper>
         <Button onClick={close}>Cancel</Button>
       </ModalContent>
     </ReactModal>
@@ -71,7 +86,34 @@ const ModalContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+
+    h4 {
+      margin: 10px;
+    }
+  }
   img {
     width: 200px;
   }
+`;
+
+const SocialWrapper = styled.div`
+  display: flex;
+  text-align: center;
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+const AWrapper = styled.a`
+  font-size: 32px;
+  padding: 10px 20px;
+  border-radius: 50%;
+  margin: 0 20px;
+  box-shadow: 0 15px 10px #777;
 `;

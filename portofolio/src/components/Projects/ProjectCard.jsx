@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import ModalComponent from "./ModalComponent";
 
-const ProjectCard = ({ img, title, description }) => {
+const ProjectCard = ({ img, title, description, link, gitHubLink }) => {
   const [openModal, setModal] = useState(false);
 
   const toggleModal = () => {
@@ -23,6 +23,8 @@ const ProjectCard = ({ img, title, description }) => {
         img={img}
         title={title}
         description={description}
+        link={link}
+        gitHubLink={gitHubLink}
       />
     </MainWrapper>
   );

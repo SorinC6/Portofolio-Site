@@ -22,8 +22,12 @@ export const ProfileImg = styled.img`
   border-radius: 50%;
   width: 300px;
   transition: transform 1s;
+
   &:hover {
     transform: scale(1.2) rotate(9deg);
+    @media (max-width: 400px) {
+      transform: none;
+    }
   }
 `;
 
@@ -32,6 +36,10 @@ export const Description = styled.div`
   align-items: center;
   width: 80%;
   justify-content: space-between;
+  @media (max-width: 800px) {
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 
 export const TextContainer = styled.div`
@@ -39,6 +47,12 @@ export const TextContainer = styled.div`
   flex-direction: column;
   max-width: 55%;
   align-items: center;
+  @media (max-width: 800px) {
+    max-width: 100%;
+    text-align: justify;
+    padding: 0;
+    margin: 0;
+  }
   p {
     font-size: 20px;
     padding: 10px;
@@ -109,4 +123,7 @@ export const IconWrapper = styled.div`
   width: 90%;
   justify-content: space-between;
   margin: 0 auto;
+  @media (max-width: 450px) {
+    justify-content: center;
+  }
 `;

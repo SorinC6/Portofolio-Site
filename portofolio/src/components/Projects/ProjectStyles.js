@@ -76,6 +76,16 @@ export const MainWrapper = styled.div`
       font-size: 25px;
     }
 
+    @media (max-width: 400px) {
+      opacity: 0.7;
+      color: white;
+      background: rgba(0, 0, 0, 0.7);
+      cursor: cell;
+      h1 {
+        content: "Press for details";
+      }
+    }
+
     &:hover {
       opacity: 0.7;
       color: white;
@@ -139,6 +149,8 @@ export const ModalContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 100%;
   a {
     display: flex;
     flex-direction: column;

@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const ContactWrapper = styled.div`
-  background: lightgreen;
+  @import url("https://fonts.googleapis.com/css?family=Monda|Special+Elite&display=swap");
+  font-family: "Special Elite", cursive;
+  background: #05668D;
   height: 800px;
   padding-top: 20px;
   display: flex;
@@ -9,7 +11,11 @@ export const ContactWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   h3 {
+    margin: 0;
     margin-top: 80px;
+  }
+  h4 {
+    margin: 0;
   }
 `;
 
@@ -38,6 +44,7 @@ export const Form = styled.form`
     font-size: 16px;
     margin-bottom: 10px;
     width: 60%;
+    outline: none;
   }
 
   button {

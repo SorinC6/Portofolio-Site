@@ -104,7 +104,7 @@ class Contact extends Component {
             </SocialWrapper>
           </Slide>
           <Slide bottom>
-            <p>Chis Sorin Portofolo Site</p>
+            <p>- Chis Sorin Portofolo Site -</p>
           </Slide>
         </ContactWrapper>
       </Element>

@@ -6,7 +6,7 @@ export const ProjectsWrapper = styled.div`
   @import url("https://fonts.googleapis.com/css?family=Monda|Special+Elite&display=swap");
   font-family: "Special Elite", cursive;
   padding-top: 100px;
-  background: lightpink;
+  background: #f2a359;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,10 +26,9 @@ export const CardsWrapper = styled.div`
   max-width: 80%;
   margin: 50px auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  position: relative;
-  z-index: 0;
   div {
   }
 `;

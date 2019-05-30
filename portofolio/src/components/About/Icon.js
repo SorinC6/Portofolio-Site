@@ -22,12 +22,12 @@ const Wrapper = styled.div`
   align-items: center;
   max-width: 150px;
   position: relative;
+  margin-top: 20px;
   z-index: -10;
   p:nth-of-type(1) {
     margin-top: 20px;
     font-size: 20px;
     font-weight: bold;
-    
   }
   p:nth-of-type(2) {
     margin: 0;

@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import { Element } from "react-scroll";
 import ProjectCard from "./ProjectCard";
 import testImg from "../assets/test.png";
@@ -7,6 +6,7 @@ import book from "../assets/book.png";
 import soup from "../assets/soup.png";
 import soupb from "../assets/soupb.png";
 import shop from "../assets/shop-phones.png";
+import { ProjectsWrapper, CardsWrapper } from "./ProjectStyles";
 
 const Projects = () => {
   return (
@@ -60,35 +60,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
-const ProjectsWrapper = styled.div`
-  @import url("https://fonts.googleapis.com/css?family=Monda|Special+Elite&display=swap");
-  font-family: "Special Elite", cursive;
-  padding-top: 100px;
-  background: lightpink;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 2;
-
-  h4 {
-    font-size: 40px;
-  }
-  h5 {
-    margin: 0;
-    font-size: 30px;
-  }
-`;
-
-const CardsWrapper = styled.div`
-  display: flex;
-  max-width: 80%;
-  margin: 50px auto;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  position: relative;
-  z-index: 0;
-  div {
-  }
-`;

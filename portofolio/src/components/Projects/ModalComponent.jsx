@@ -92,13 +92,14 @@ const ModalContent = styled.div`
     align-items: center;
     color: white;
     text-decoration: none;
+    img {
+      width: 200px;
+      height: 230px;
+    }
 
     h4 {
       margin: 10px;
     }
-  }
-  img {
-    width: 200px;
   }
 `;
 

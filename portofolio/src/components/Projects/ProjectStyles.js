@@ -76,7 +76,7 @@ export const MainWrapper = styled.div`
       font-size: 25px;
     }
 
-    @media (max-width: 400px) {
+    @media (max-width: 500px) {
       opacity: 0.7;
       color: white;
       background: rgba(0, 0, 0, 0.7);

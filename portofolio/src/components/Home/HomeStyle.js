@@ -14,6 +14,10 @@ export const TextWrapper = styled.div`
   position: relative;
   top: 30%;
 
+  @media (max-width: 1000px) {
+    top: 10%;
+  }
+
   h2 {
     margin: 10px;
     font-size: 40px;
@@ -100,8 +104,14 @@ export const SocialWrapper = styled.div`
   flex-direction: column;
   margin: 20px;
   width: 140px;
-  position: relative;
-  z-index: 1;
+
+  @media (max-width: 1000px) {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    margin-top: 100px;
+  }
 `;
 
 export const AWrapper = styled.a`

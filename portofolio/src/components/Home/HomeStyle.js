@@ -104,7 +104,7 @@ export const SocialWrapper = styled.div`
   flex-direction: column;
   margin: 20px;
   width: 140px;
-
+  position: relative;
   @media (max-width: 1000px) {
     flex-direction: row;
     justify-content: center;

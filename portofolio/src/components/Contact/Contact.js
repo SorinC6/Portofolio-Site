@@ -10,7 +10,9 @@ class Contact extends Component {
     name: "",
     email: "",
     message: "",
-    openModal: false
+    openModal: false,
+    modalTitle: "",
+    modalContent: ""
   };
   sendMessage = e => {
     e.preventDefault();
@@ -33,7 +35,10 @@ class Contact extends Component {
           )
           .then(() => {
             this.setState({
-              openModal: true
+              openModal: true,
+              modalTitle: "Thank you, Message was sent",
+              modalContent:
+                "Hey! Thanks for contacting me. I'll get back to you soon as I can"
             });
             setTimeout(() => {
               this.setState({
@@ -45,7 +50,9 @@ class Contact extends Component {
       } catch (error) {}
     } else {
       this.setState({
-        openModal: true
+        openModal: true,
+        modalTitle: "Message was not sent",
+        modalContent: "Please provide all fields and a valid email adress"
       });
       setTimeout(() => {
         this.setState({
@@ -122,12 +129,9 @@ class Contact extends Component {
           </Slide>
         </ContactWrapper>
         <Modal open={this.state.openModal} basic size="small">
-          <Header icon="talk" content="Email was Sent" />
+          <Header icon="talk" content={this.state.modalTitle} />
           <Modal.Content>
-            <p style={{ fontSize: 30 }}>
-              Hey! Thanks for contacting me. I'll get back to you soon as I
-              can.`
-            </p>
+            <p style={{ fontSize: 30 }}>{this.state.modalContent}</p>
           </Modal.Content>
         </Modal>
       </Element>

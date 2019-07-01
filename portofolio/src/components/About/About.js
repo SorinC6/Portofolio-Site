@@ -5,6 +5,8 @@ import Flip from "react-reveal/Flip";
 import Icon from "./Icon";
 import PDF from "../PdfComponent/PDF";
 import Skills from "./Skills";
+import reactlogo from "../assets/reactlogo.jpg";
+import nodelogo from "../assets/nodelogo.jpg";
 import {
   AboutWrapper,
   ContentWrapper,
@@ -14,7 +16,8 @@ import {
   ResumeButton,
   BuildWrapper,
   TextSwitch,
-  IconWrapper
+  IconWrapper,
+  SkillsWrapper
 } from "./AboutStyles";
 
 class About extends Component {
@@ -52,9 +55,15 @@ class About extends Component {
                 </ResumeButton>
               </TextContainer>
             </Description>
-            <div>
-              <Skills name="React" img=""/>
-            </div>
+            <SkillsWrapper>
+              <Skills name="React" img={reactlogo} name="Javascrip" value="80"/>
+              <Skills name="React" img={reactlogo} name="React" value="90"/>
+              <Skills name="React" img={reactlogo} name="Redux" value="85"/>
+              <Skills name="React" img={nodelogo} name="Node" value="80"/>
+              <Skills name="React" img={reactlogo} name="Java" value="50"/>
+              <Skills name="React" img={reactlogo} name="HTML" value="96"/>
+              <Skills name="React" img={reactlogo} name="CSS" value="95"/>
+            </SkillsWrapper>
             <BuildWrapper>
               <TextSwitch>
                 I Love <span />

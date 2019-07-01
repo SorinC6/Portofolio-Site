@@ -127,3 +127,9 @@ export const IconWrapper = styled.div`
     justify-content: center;
   }
 `;
+
+export const SkillsWrapper = styled.div`
+  display: flex;
+  padding: 10px auto;
+  margin-top: 40px;
+`;

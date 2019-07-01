@@ -4,6 +4,7 @@ import profileImg from "../assets/profile.jpg";
 import Flip from "react-reveal/Flip";
 import Icon from "./Icon";
 import PDF from "../PdfComponent/PDF";
+import Skills from "./Skills";
 import {
   AboutWrapper,
   ContentWrapper,
@@ -51,6 +52,9 @@ class About extends Component {
                 </ResumeButton>
               </TextContainer>
             </Description>
+            <div>
+              <Skills name="React" img=""/>
+            </div>
             <BuildWrapper>
               <TextSwitch>
                 I Love <span />

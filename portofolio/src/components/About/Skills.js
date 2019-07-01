@@ -1,5 +1,6 @@
 import React from "react";
 import { CircularProgressbarWithChildren } from "react-circular-progressbar";
+import Roll from "react-reveal/Roll";
 
 import "react-circular-progressbar/dist/styles.css";
 import styled from "styled-components";
@@ -9,13 +10,15 @@ const Skills = ({ value, img, name }) => {
 
   return (
     <SkillsWrapper>
-      <CircularProgressbarWithChildren value={value}>
-        {/* Put any JSX content in here that you'd like. It'll be vertically and horizonally centered. */}
-        <img style={{ width: 70, marginTop: -5 }} src={img} alt="name" />
-        <div style={{ fontSize: 12, marginTop: -5 }}>
-          <strong>{name}</strong>
-        </div>
-      </CircularProgressbarWithChildren>
+      <Roll left>
+        <CircularProgressbarWithChildren value={value}>
+          {/* Put any JSX content in here that you'd like. It'll be vertically and horizonally centered. */}
+          <i class={`fab fa-${name}`} />
+          <div style={{ fontSize: 12, marginTop: -5 }}>
+            <strong>{name}</strong>
+          </div>
+        </CircularProgressbarWithChildren>
+      </Roll>
     </SkillsWrapper>
   );
 };
@@ -23,5 +26,8 @@ const Skills = ({ value, img, name }) => {
 export default Skills;
 
 const SkillsWrapper = styled.div`
-  width: 100px;
+  width: 140px;
+
+  img {
+  }
 `;

@@ -130,6 +130,14 @@ export const IconWrapper = styled.div`
 
 export const SkillsWrapper = styled.div`
   display: flex;
-  padding: 10px auto;
+  justify-content: space-between;
+  width: 100%;
   margin-top: 40px;
+  background-color: darkred;
+  border: 1px solid black;
+  color: white;
+  padding: 40px 10px;
+  i {
+    font-size: 70px;
+  }
 `;

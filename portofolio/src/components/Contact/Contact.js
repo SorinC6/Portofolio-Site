@@ -3,12 +3,14 @@ import { Element } from "react-scroll";
 import Slide from "react-reveal/Slide";
 import axios from "axios";
 import { ContactWrapper, Form, SocialWrapper, AWrapper } from "./ContactStyles";
+import { Button, Header, Icon, Modal } from "semantic-ui-react";
 
 class Contact extends Component {
   state = {
     name: "",
     email: "",
-    message: ""
+    message: "",
+    openModal: false
   };
   sendMessage = e => {
     e.preventDefault();
@@ -27,17 +29,29 @@ class Contact extends Component {
       try {
         axios
           .get(
-            `http://localhost:8888/send-email?recipient=kish.sorin@yahoo.com&sender=${email}&topic=${name}&text=${message}`
+            `https://portofolio-server.herokuapp.com/send-email?recipient=kish.sorin@yahoo.com&sender=${email}&topic=${name}&text=${message}`
           )
           .then(() => {
-            alert(
-              `Hey! Thanks for contacting me. I'll get back to you soon as I can.`
-            );
+            this.setState({
+              openModal: true
+            });
+            setTimeout(() => {
+              this.setState({
+                openModal: false
+              });
+            }, 3000);
           })
           .catch(err => console.log(err));
       } catch (error) {}
     } else {
-      alert("Please provide a message");
+      this.setState({
+        openModal: true
+      });
+      setTimeout(() => {
+        this.setState({
+          openModal: false
+        });
+      }, 3000);
     }
 
     this.clearInput();
@@ -107,6 +121,15 @@ class Contact extends Component {
             <p>- Chis Sorin Portofolo Site -</p>
           </Slide>
         </ContactWrapper>
+        <Modal open={this.state.openModal} basic size="small">
+          <Header icon="talk" content="Email was Sent" />
+          <Modal.Content>
+            <p style={{ fontSize: 30 }}>
+              Hey! Thanks for contacting me. I'll get back to you soon as I
+              can.`
+            </p>
+          </Modal.Content>
+        </Modal>
       </Element>
     );
   }

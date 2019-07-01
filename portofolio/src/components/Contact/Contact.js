@@ -3,12 +3,16 @@ import { Element } from "react-scroll";
 import Slide from "react-reveal/Slide";
 import axios from "axios";
 import { ContactWrapper, Form, SocialWrapper, AWrapper } from "./ContactStyles";
+import { Button, Header, Icon, Modal } from "semantic-ui-react";
 
 class Contact extends Component {
   state = {
     name: "",
     email: "",
-    message: ""
+    message: "",
+    openModal: false,
+    modalTitle: "",
+    modalContent: ""
   };
   sendMessage = e => {
     e.preventDefault();
@@ -27,17 +31,34 @@ class Contact extends Component {
       try {
         axios
           .get(
-            `http://localhost:8888/send-email?recipient=kish.sorin@yahoo.com&sender=${email}&topic=${name}&text=${message}`
+            `https://portofolio-server.herokuapp.com/send-email?recipient=kish.sorin@yahoo.com&sender=${email}&topic=${name}&text=${message}`
           )
           .then(() => {
-            alert(
-              `Hey! Thanks for contacting me. I'll get back to you soon as I can.`
-            );
+            this.setState({
+              openModal: true,
+              modalTitle: "Thank you, Message was sent",
+              modalContent:
+                "Hey! Thanks for contacting me. I'll get back to you soon as I can"
+            });
+            setTimeout(() => {
+              this.setState({
+                openModal: false
+              });
+            }, 3000);
           })
           .catch(err => console.log(err));
       } catch (error) {}
     } else {
-      alert("Please provide a message");
+      this.setState({
+        openModal: true,
+        modalTitle: "Message was not sent",
+        modalContent: "Please provide all fields and a valid email adress"
+      });
+      setTimeout(() => {
+        this.setState({
+          openModal: false
+        });
+      }, 3000);
     }
 
     this.clearInput();
@@ -107,6 +128,12 @@ class Contact extends Component {
             <p>- Chis Sorin Portofolo Site -</p>
           </Slide>
         </ContactWrapper>
+        <Modal open={this.state.openModal} basic size="small">
+          <Header icon="talk" content={this.state.modalTitle} />
+          <Modal.Content>
+            <p style={{ fontSize: 30 }}>{this.state.modalContent}</p>
+          </Modal.Content>
+        </Modal>
       </Element>
     );
   }

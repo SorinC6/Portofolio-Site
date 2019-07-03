@@ -12,8 +12,21 @@ class Contact extends Component {
     message: "",
     openModal: false,
     modalTitle: "",
-    modalContent: ""
+    modalContent: "",
+    loading: false
   };
+
+  setLoadingTrue = () => {
+    this.setState({
+      loading: true
+    });
+  };
+  setLoadingFalse = () => {
+    this.setState({
+      loading: false
+    });
+  };
+
   sendMessage = e => {
     e.preventDefault();
 
@@ -27,13 +40,14 @@ class Contact extends Component {
       message.length > 0;
 
     if (goodInputsField) {
-      console.log(name, email, message);
+      this.setLoadingTrue();
       try {
         axios
           .get(
-            `https://portofolio-server.herokuapp.com/send-email?recipient=kish.sorin@yahoo.com&sender=${email}&topic=${name}&text=${message}`
+            `https://portofolio-server.herokuapp.com/send-email?recipient=sorin.chis06@gmail.com&sender=${email}&topic=${name}&text=${message}`
           )
           .then(() => {
+            this.setLoadingFalse();
             this.setState({
               openModal: true,
               modalTitle: "Thank you, Message was sent",
@@ -41,13 +55,16 @@ class Contact extends Component {
                 "Hey! Thanks for contacting me. I'll get back to you soon as I can"
             });
             setTimeout(() => {
+              this.clearInput();
               this.setState({
                 openModal: false
               });
             }, 3000);
           })
           .catch(err => console.log(err));
-      } catch (error) {}
+      } catch (error) {
+        this.setLoadingFalse();
+      }
     } else {
       this.setState({
         openModal: true,
@@ -55,13 +72,12 @@ class Contact extends Component {
         modalContent: "Please provide all fields and a valid email adress"
       });
       setTimeout(() => {
+        this.clearInput();
         this.setState({
           openModal: false
         });
       }, 3000);
     }
-
-    this.clearInput();
   };
   clearInput = () => {
     this.setState({
@@ -108,7 +124,16 @@ class Contact extends Component {
                 name="message"
                 value={this.state.message}
               />
-              <button type="submit">Send Message</button>
+              <Button
+                inverted
+                color="blue"
+                type="submit"
+                size="huge"
+                fluid
+                loading={this.state.loading}
+              >
+                Send Message
+              </Button>
             </Slide>
           </Form>
           <Slide bottom>

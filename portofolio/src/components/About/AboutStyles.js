@@ -4,7 +4,7 @@ export const AboutWrapper = styled.div`
   @import url("https://fonts.googleapis.com/css?family=Signika&display=swap");
   font-family: "Signika", sans-serif;
   background: white;
-  padding: 100px 50px;
+  padding: 100px 0px;
 
   h3 {
     font-size: 30px;
@@ -36,6 +36,7 @@ export const Description = styled.div`
   align-items: center;
   width: 80%;
   justify-content: space-between;
+  padding: 0 50px;
   @media (max-width: 800px) {
     flex-direction: column;
     width: 100%;

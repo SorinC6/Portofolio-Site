@@ -12,6 +12,8 @@ import reduxlogo from "../assets/reduxlogo.png";
 import jslogo from "../assets/jslogo.jpg";
 import htmllogo from "../assets/htmllogo.png";
 import csslogo from "../assets/csslogo.png";
+import Particles from "../Particles/index";
+
 import {
   AboutWrapper,
   ContentWrapper,
@@ -61,6 +63,7 @@ class About extends Component {
               </TextContainer>
             </Description>
             <SkillsWrapper>
+              <Particles />
               <Skills
                 name="React"
                 img={reactlogo}

@@ -11,6 +11,7 @@ export const ProjectsWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   z-index: 2;
+  width: 100%;
 
   h4 {
     font-size: 40px;
@@ -26,8 +27,8 @@ export const CardsWrapper = styled.div`
   max-width: 80%;
   margin: 50px auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: space;
   flex-wrap: wrap;
   div {
   }

@@ -12,6 +12,8 @@ import reduxlogo from "../assets/reduxlogo.png";
 import jslogo from "../assets/jslogo.jpg";
 import htmllogo from "../assets/htmllogo.png";
 import csslogo from "../assets/csslogo.png";
+import Particles from "../Particles/index";
+
 import {
   AboutWrapper,
   ContentWrapper,
@@ -61,19 +63,14 @@ class About extends Component {
               </TextContainer>
             </Description>
             <SkillsWrapper>
-              <Skills
-                name="React"
-                img={reactlogo}
-                name="Javascrip"
-                value="80"
-              />
-              <Skills name="React" img={reactlogo} name="react" value="90" />
-              <Skills name="Node" img={nodelogo} name="node" value="80" />
-              <Skills name="Redux" img={reduxlogo} name="Redux" value="85" />
-              <Skills name="Javascript" img={jslogo} name="js" value="50" />
-              <Skills name="Java" img={javalogo} name="HTML" value="96" />
-              <Skills name="HTML" img={htmllogo} name="CSS" value="95" />
-              <Skills name="CSS" img={csslogo} name="CSS" value="95" />
+              <Particles />
+              <Skills name="js" value="70" />
+              <Skills name="react" value="90" />
+              <Skills name="node" value="80" />
+              {/* <Skills name="Redux" img={reduxlogo} name="Redux" value="85" /> */}
+              <Skills name="java" value="60" />
+              <Skills name="html5" value="95" />
+              <Skills name="css3" value="90" />
             </SkillsWrapper>
             <BuildWrapper>
               <TextSwitch>

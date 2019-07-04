@@ -4,7 +4,7 @@ export const AboutWrapper = styled.div`
   @import url("https://fonts.googleapis.com/css?family=Signika&display=swap");
   font-family: "Signika", sans-serif;
   background: white;
-  padding: 100px 50px;
+  padding: 100px 0px;
 
   h3 {
     font-size: 30px;
@@ -36,6 +36,7 @@ export const Description = styled.div`
   align-items: center;
   width: 80%;
   justify-content: space-between;
+  padding: 0 50px;
   @media (max-width: 800px) {
     flex-direction: column;
     width: 100%;
@@ -73,6 +74,7 @@ export const ResumeButton = styled.a`
     color: red;
     background: lightslategray;
     animation: shake 0.4s linear 1;
+    cursor: pointer;
   }
   @keyframes shake {
     33% {
@@ -136,6 +138,7 @@ export const SkillsWrapper = styled.div`
   background-color: darkred;
   border: 1px solid black;
   color: white;
+  opacity: 0.9;
   padding: 40px 10px;
   i {
     font-size: 70px;

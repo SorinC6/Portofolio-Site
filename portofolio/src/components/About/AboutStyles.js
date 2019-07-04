@@ -74,6 +74,7 @@ export const ResumeButton = styled.a`
     color: red;
     background: lightslategray;
     animation: shake 0.4s linear 1;
+    cursor: pointer;
   }
   @keyframes shake {
     33% {

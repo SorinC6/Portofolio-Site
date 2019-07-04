@@ -69,6 +69,7 @@ export const ButtonWrapper = styled.a`
   transition: 1s border-radius;
   &:hover {
     border-radius: 20px;
+    cursor: pointer;
   }
   &:before {
     content: "";

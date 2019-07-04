@@ -45,12 +45,12 @@ const Projects = () => {
           />
           <ProjectCard
             img={testImg}
-            title="Book Title"
+            title="Empty Card for future project"
             description="lorem ipsus lorem ipsus lorem ipsuslorem ipsuslorem ipsus lorem ipsuslorem ipsus"
           />
           <ProjectCard
             img={testImg}
-            title="Book Title"
+            title="Empty Card for future project"
             description="lorem ipsus lorem ipsus lorem ipsuslorem ipsuslorem ipsus lorem ipsuslorem ipsus"
           />
         </CardsWrapper>

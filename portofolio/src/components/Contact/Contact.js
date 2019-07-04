@@ -152,13 +152,13 @@ class Contact extends Component {
           <Slide bottom>
             <p>- Chis Sorin Portofolo Site -</p>
           </Slide>
+          <Modal open={this.state.openModal} basic size="small">
+            <Header icon="talk" content={this.state.modalTitle} />
+            <Modal.Content>
+              <p style={{ fontSize: 30 }}>{this.state.modalContent}</p>
+            </Modal.Content>
+          </Modal>
         </ContactWrapper>
-        <Modal open={this.state.openModal} basic size="small">
-          <Header icon="talk" content={this.state.modalTitle} />
-          <Modal.Content>
-            <p style={{ fontSize: 30 }}>{this.state.modalContent}</p>
-          </Modal.Content>
-        </Modal>
       </Element>
     );
   }

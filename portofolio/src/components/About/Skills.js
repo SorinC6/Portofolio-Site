@@ -6,17 +6,12 @@ import "react-circular-progressbar/dist/styles.css";
 import styled from "styled-components";
 
 const Skills = ({ value, img, name }) => {
-  const percentage = 66;
-
   return (
     <SkillsWrapper>
       <Roll left>
         <CircularProgressbarWithChildren value={value}>
           {/* Put any JSX content in here that you'd like. It'll be vertically and horizonally centered. */}
           <i class={`fab fa-${name}`} />
-          <div style={{ fontSize: 12, marginTop: -5 }}>
-            <strong>{name}</strong>
-          </div>
         </CircularProgressbarWithChildren>
       </Roll>
     </SkillsWrapper>

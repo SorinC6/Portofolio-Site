@@ -137,6 +137,7 @@ export const SkillsWrapper = styled.div`
   background-color: darkred;
   border: 1px solid black;
   color: white;
+  opacity: 0.9;
   padding: 40px 10px;
   i {
     font-size: 70px;

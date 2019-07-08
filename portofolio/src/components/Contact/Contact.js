@@ -3,7 +3,7 @@ import { Element } from "react-scroll";
 import Slide from "react-reveal/Slide";
 import axios from "axios";
 import { ContactWrapper, Form, SocialWrapper, AWrapper } from "./ContactStyles";
-import { Button, Header, Icon, Modal } from "semantic-ui-react";
+import { Button, Header, Modal } from "semantic-ui-react";
 
 class Contact extends Component {
   state = {
@@ -44,7 +44,7 @@ class Contact extends Component {
       try {
         axios
           .get(
-            `https://portofolio-server.herokuapp.com/send-email?recipient=sorin.chis06@gmail.com&sender=${email}&topic=${name}&text=${message}`
+            `https://portofolio-server.herokuapp.com/send-email?recipient=kish.sorin@yahoo.com&sender=${email}&topic=${name}&text=${message}`
           )
           .then(() => {
             this.setLoadingFalse();

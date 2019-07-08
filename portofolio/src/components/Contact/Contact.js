@@ -44,7 +44,7 @@ class Contact extends Component {
       try {
         axios
           .get(
-            `https://portofolio-server.herokuapp.com/send-email?recipient=sorin.chis06@gmail.com&sender=${email}&topic=${name}&text=${message}`
+            `https://portofolio-server.herokuapp.com/send-email?recipient=kish.sorin@yahoo.com&sender=${email}&topic=${name}&text=${message}`
           )
           .then(() => {
             this.setLoadingFalse();

@@ -46,8 +46,9 @@ class About extends Component {
                 <Flip left>
                   <p>
                     Enthusiast programmer, passionate about clean and organized
-                    code. I aim to know and work with the newest fullstack web
-                    development technologies.
+                    code. Constantly learning new things in order to become a
+                    better developer, I aim to know and work with the newest
+                    fullstack web development technologies.
                   </p>
                 </Flip>
                 <ResumeButton onClick={this.toggleModal}>

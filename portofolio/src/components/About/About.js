@@ -5,13 +5,6 @@ import Flip from "react-reveal/Flip";
 import Icon from "./Icon";
 import PDF from "../PdfComponent/PDF";
 import Skills from "./Skills";
-import reactlogo from "../assets/reactlogo.jpg";
-import nodelogo from "../assets/nodelogo.jpg";
-import javalogo from "../assets/javalogo.png";
-import reduxlogo from "../assets/reduxlogo.png";
-import jslogo from "../assets/jslogo.jpg";
-import htmllogo from "../assets/htmllogo.png";
-import csslogo from "../assets/csslogo.png";
 import Particles from "../Particles/index";
 
 import {

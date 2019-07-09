@@ -3,7 +3,7 @@ import { Element } from "react-scroll";
 import Slide from "react-reveal/Slide";
 import axios from "axios";
 import { ContactWrapper, Form, SocialWrapper, AWrapper } from "./ContactStyles";
-import { Button, Header, Modal, Input } from "semantic-ui-react";
+import { Button, Header, Modal } from "semantic-ui-react";
 
 class Contact extends Component {
   state = {

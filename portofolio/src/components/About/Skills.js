@@ -11,7 +11,7 @@ const Skills = ({ value, img, name }) => {
       <Roll left>
         <CircularProgressbarWithChildren value={value}>
           {/* Put any JSX content in here that you'd like. It'll be vertically and horizonally centered. */}
-          <i class={`fab fa-${name}`} />
+          <i className={`fab fa-${name}`} />
         </CircularProgressbarWithChildren>
       </Roll>
     </SkillsWrapper>

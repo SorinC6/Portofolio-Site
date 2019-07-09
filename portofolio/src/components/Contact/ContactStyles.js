@@ -30,6 +30,11 @@ export const Form = styled.form`
   background-color: rgba(0, 0, 0, 0.2);
   box-shadow: 0 15px 10px #777;
 
+  @media (max-width: 500px) {
+    padding: 20px 0;
+    width: 90%;
+  }
+
   input {
     text-align: justify;
     padding: 13px 20px;
@@ -37,10 +42,11 @@ export const Form = styled.form`
     margin: 10px;
     border-radius: 10px;
     outline: none;
-    max-width: 70%;
+    max-width: 80%;
 
     @media (max-width: 500px) {
       margin: 10px 0;
+      width: 100%;
     }
   }
   textarea {
@@ -50,6 +56,11 @@ export const Form = styled.form`
     margin-bottom: 10px;
     width: 60%;
     outline: none;
+
+    @media (max-width: 500px) {
+      margin: 10px 0;
+      width: 80%;
+    }
   }
 
   button {

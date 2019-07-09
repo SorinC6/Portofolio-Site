@@ -72,7 +72,7 @@ export const ResumeButton = styled.a`
   transition: all 0.5s;
   &:hover {
     border: 3px solid darkred;
-    color: red;
+    color: yellow;
     background: lightslategray;
     animation: shake 0.4s linear 1;
     cursor: pointer;

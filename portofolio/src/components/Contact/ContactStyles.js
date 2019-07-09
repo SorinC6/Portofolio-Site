@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContactWrapper = styled.div`
   @import url("https://fonts.googleapis.com/css?family=Monda|Special+Elite&display=swap");
   font-family: "Special Elite", cursive;
-  background: #05668D;
+  background: #05668d;
   height: 800px;
   padding-top: 20px;
   display: flex;
@@ -37,6 +37,11 @@ export const Form = styled.form`
     margin: 10px;
     border-radius: 10px;
     outline: none;
+    max-width: 70%;
+
+    @media (max-width: 500px) {
+      margin: 10px 0;
+    }
   }
   textarea {
     height: 100px;

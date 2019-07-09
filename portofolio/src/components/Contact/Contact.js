@@ -3,7 +3,7 @@ import { Element } from "react-scroll";
 import Slide from "react-reveal/Slide";
 import axios from "axios";
 import { ContactWrapper, Form, SocialWrapper, AWrapper } from "./ContactStyles";
-import { Button, Header, Modal } from "semantic-ui-react";
+import { Button, Header, Modal, Input } from "semantic-ui-react";
 
 class Contact extends Component {
   state = {
@@ -51,8 +51,7 @@ class Contact extends Component {
             this.setState({
               openModal: true,
               modalTitle: "Thank you, Message was sent",
-              modalContent:
-                "Hey! Thanks for contacting me. I'll get back to you soon as I can"
+              modalContent: "Hey! Thanks for contacting me !"
             });
             setTimeout(() => {
               this.clearInput();
@@ -104,14 +103,14 @@ class Contact extends Component {
           <Form onSubmit={this.sendMessage}>
             <Slide left>
               <input
-                placeholder="Name"
+                placeholder="&#9786; Name"
                 onChange={this.onChangeHendler}
                 name="name"
                 value={this.state.name}
               />
 
               <input
-                placeholder="Email"
+                placeholder="&#128236; Email"
                 onChange={this.onChangeHendler}
                 name="email"
                 value={this.state.email}
@@ -119,7 +118,7 @@ class Contact extends Component {
             </Slide>
             <Slide right>
               <textarea
-                placeholder="Message"
+                placeholder="&#128495;  Message"
                 onChange={this.onChangeHendler}
                 name="message"
                 value={this.state.message}

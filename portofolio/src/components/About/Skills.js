@@ -22,6 +22,11 @@ export default Skills;
 
 const SkillsWrapper = styled.div`
   width: 140px;
+  margin: 10px;
+
+  @media (max-width: 1000px) {
+    width: 100px;
+  }
 
   img {
   }

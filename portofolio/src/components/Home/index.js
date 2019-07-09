@@ -37,7 +37,7 @@ class Home extends Component {
             <AWrapper href="https://github.com/SorinC6" target="_blank">
               <i className="fab fa-github" />
             </AWrapper>
-            <AWrapper href="www.linkedin.com/in/sorinchis" target="_blank">
+            <AWrapper href="https://linkedin.com/in/sorinchis" target="_blank">
               <i className="fab fa-linkedin" />
             </AWrapper>
           </SocialWrapper>

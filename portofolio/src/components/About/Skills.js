@@ -21,7 +21,7 @@ const Skills = ({ value, img, name }) => {
 export default Skills;
 
 const SkillsWrapper = styled.div`
-  width: 140px;
+  width: 100px;
   margin: 10px;
 
   @media (max-width: 1000px) {

@@ -137,14 +137,14 @@ export const SkillsWrapper = styled.div`
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  margin-top: 40px;
+  margin-top: 100px;
   background-color: darkred;
   border: 1px solid black;
   color: white;
   opacity: 0.9;
-  padding: 40px 10px;
+  padding: 20px 10px;
   i {
-    font-size: 70px;
+    font-size: 50px;
 
     @media (max-width: 1000px) {
       font-size: 50px;

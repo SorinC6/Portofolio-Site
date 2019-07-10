@@ -1,22 +1,24 @@
 import React from "react";
-import Roll from "react-reveal/Roll";
+import Flip from "react-reveal/Flip";
 import styled, { css } from "styled-components";
 
 const BigCard = () => {
   return (
     <MissionContainer>
-      <Article>
-        <Title>Unsilenced</Title>
-        <p>
-          Comments disabled? Not anymore. Take back the conversation with your
-          own Unsilenced Space. Add a simple link to your video description to
-          provide an enhanced viewing experience for your visitors, complete
-          with comments. Moderated and unmoderated options available.
-        </p>
-        <GetStarted href="https://unsilenced.space/" target="_blank">
-          View Project
-        </GetStarted>
-      </Article>
+      <Flip bottom>
+        <Article>
+          <Title>Unsilenced</Title>
+          <p>
+            Comments disabled? Not anymore. Take back the conversation with your
+            own Unsilenced Space. Add a simple link to your video description to
+            provide an enhanced viewing experience for your visitors, complete
+            with comments. Moderated and unmoderated options available.
+          </p>
+          <GetStarted href="https://unsilenced.space/" target="_blank">
+            View Project
+          </GetStarted>
+        </Article>
+      </Flip>
     </MissionContainer>
   );
 };

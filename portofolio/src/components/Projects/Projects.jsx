@@ -1,6 +1,7 @@
 import React from "react";
 import { Element } from "react-scroll";
 import ProjectCard from "./ProjectCard";
+import BigProjectCard from "./BigCard";
 import testImg from "../assets/test.png";
 import book from "../assets/book.png";
 import soup from "../assets/soup.png";
@@ -14,6 +15,7 @@ const Projects = () => {
       <ProjectsWrapper>
         <h4>Portofolio</h4>
         <h5>Some of my Work so far</h5>
+        <BigProjectCard />
         <CardsWrapper>
           <ProjectCard
             img={book}

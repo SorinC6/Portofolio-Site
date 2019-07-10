@@ -58,7 +58,7 @@ class About extends Component {
             </Description>
             <SkillsWrapper>
               <Particles />
-              <Skills name="js" value="70" />
+              <Skills name="js" value="75" />
               <Skills name="react" value="90" />
               <Skills name="node" value="80" />
               {/* <Skills name="Redux" img={reduxlogo} name="Redux" value="85" /> */}

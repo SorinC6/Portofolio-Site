@@ -10,9 +10,10 @@ const BigCard = () => {
           <Title>Unsilenced</Title>
           <p>
             Comments disabled? Not anymore. Take back the conversation with your
-            own Unsilenced Space. Add a simple link to your video description to
-            provide an enhanced viewing experience for your visitors, complete
-            with comments. Moderated and unmoderated options available.
+            own Unsilenced Space. Add a simple link to your youtube video
+            description to provide an enhanced viewing experience for your
+            visitors, complete with comments. Moderated and unmoderated options
+            available.
           </p>
           <GetStarted href="https://unsilenced.space/" target="_blank">
             View Project
@@ -25,9 +26,9 @@ const BigCard = () => {
 
 export default BigCard;
 
-const BigCardWrapper = styled.div`
-  width: 80%;
-`;
+// const BigCardWrapper = styled.div`
+//   width: 80%;
+// `;
 
 const transition = css`
   -webkit-transition: all 0.25s ease;
@@ -48,7 +49,7 @@ const MissionContainer = styled.section`
   height: 400px;
   margin-top: 50px;
   @media (max-width: 500px) {
-    height: 700px;
+    height: 500px;
   }
 `;
 const Article = styled.article`
@@ -68,6 +69,9 @@ const Article = styled.article`
     text-align: justify;
     padding-top: 1rem;
     font-size: 1.3rem;
+    @media (max-width: 500px) {
+      width: 250px;
+    }
 
     @media (max-width: 500px) {
       font-size: 16px;
@@ -112,6 +116,11 @@ const GetStarted = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 500px) {
+    font-size: 17px;
+    width: 200px;
+  }
   &:hover {
     background: black;
     border: 2px solid #fff;
@@ -129,6 +138,7 @@ const Title = styled.div`
   padding: 20px;
 
   @media (max-width: 500px) {
-    font-size: 22px;
+    font-size: 17px;
+    letter-spacing: 13px;
   }
 `;

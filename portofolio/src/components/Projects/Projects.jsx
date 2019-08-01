@@ -19,11 +19,25 @@ const Projects = () => {
           deployment="https://unsilenced.space/"
           gitHubLink="https://github.com/unsilenced-project"
           title="Unsilenced"
-          text=" Comments disabled? Not anymore. Take back the conversation with your
+          text="Comments disabled? Not anymore. Take back the conversation with your
           own Unsilenced Space. Add a simple link to your youtube video
           description to provide an enhanced viewing experience for your
           visitors, complete with comments. Moderated and unmoderated options
           available."
+        />
+        <BigProjectCard
+          deployment="https://geoapp-mbc2dr3be.now.sh"
+          gitHubLink="https://github.com/SorinC6/GeoApp"
+          title="GeoApp"
+          text="GeaApp is a live geolocation application where users can 'pin' different locations on the map and share their own content with other users in realtime to share pictures, reviews of the location and area, interact with other users by adding comments to their pins, and manage the pins they've created."
+          background="purple"
+        />
+        <BigProjectCard
+          deployment="https://www.npmjs.com/package/error-express-handler"
+          gitHubLink="https://github.com/SorinC6/error-handler-express"
+          title="NPM Package"
+          text="Error-Express-Handler is a easy middleware with build in errors messages for the most commun http errors in an express application. Using this package the user no longer have to put the code status and the message for the error"
+          background="blue"
         />
         <CardsWrapper>
           <ProjectCard

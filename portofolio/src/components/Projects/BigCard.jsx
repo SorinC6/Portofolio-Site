@@ -3,9 +3,9 @@ import Flip from "react-reveal/Flip";
 import styled, { css } from "styled-components";
 import { SocialWrapper, AWrapper } from "./ProjectStyles";
 
-const BigCard = ({ title, text, deployment, gitHubLink }) => {
+const BigCard = ({ title, text, deployment, gitHubLink, background }) => {
   return (
-    <MissionContainer>
+    <MissionContainer background={background}>
       <Flip bottom>
         <Article>
           <Title>={title}</Title>
@@ -134,8 +134,10 @@ const GetStarted = styled.a`
 const Title = styled.div`
   @import url("https://fonts.googleapis.com/css?family=Monoton&display=swap");
   font-family: "Monoton", cursive;
+  width: 500px;
+  text-align: center;
   font-size: 30px;
-  letter-spacing: 20px;
+  letter-spacing: 15px;
   padding: 20px;
 
   @media (max-width: 800px) {

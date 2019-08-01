@@ -15,7 +15,16 @@ const Projects = () => {
       <ProjectsWrapper>
         <h4>Portofolio</h4>
         <h5>Some of my Work so far</h5>
-        <BigProjectCard />
+        <BigProjectCard
+          deployment="https://unsilenced.space/"
+          gitHubLink="https://github.com/unsilenced-project"
+          title="Unsilenced"
+          text=" Comments disabled? Not anymore. Take back the conversation with your
+          own Unsilenced Space. Add a simple link to your youtube video
+          description to provide an enhanced viewing experience for your
+          visitors, complete with comments. Moderated and unmoderated options
+          available."
+        />
         <CardsWrapper>
           <ProjectCard
             img={book}

@@ -1,23 +1,23 @@
 import React from "react";
 import Flip from "react-reveal/Flip";
 import styled, { css } from "styled-components";
+import { SocialWrapper, AWrapper } from "./ProjectStyles";
 
-const BigCard = () => {
+const BigCard = ({ title, text, deployment, gitHubLink }) => {
   return (
     <MissionContainer>
       <Flip bottom>
         <Article>
-          <Title>Unsilenced</Title>
-          <p>
-            Comments disabled? Not anymore. Take back the conversation with your
-            own Unsilenced Space. Add a simple link to your youtube video
-            description to provide an enhanced viewing experience for your
-            visitors, complete with comments. Moderated and unmoderated options
-            available.
-          </p>
-          <GetStarted href="https://unsilenced.space/" target="_blank">
+          <Title>={title}</Title>
+          <p>{text}</p>
+          <GetStarted href={deployment} target="_blank">
             View Project
           </GetStarted>
+          <SocialWrapper>
+            <AWrapper href={gitHubLink} target="_blank">
+              <i className="fab fa-github" />
+            </AWrapper>
+          </SocialWrapper>
         </Article>
       </Flip>
     </MissionContainer>
@@ -46,9 +46,9 @@ const MissionContainer = styled.section`
     props.background ? props.background : "darkred"};
   flex-wrap: nowrap;
   max-width: 80%;
-  height: 400px;
+  height: 430px;
   margin-top: 50px;
-  @media (max-width: 500px) {
+  @media (max-width: 800px) {
     height: 500px;
   }
 `;
@@ -73,7 +73,7 @@ const Article = styled.article`
       width: 250px;
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 800px) {
       font-size: 16px;
     }
   }
@@ -101,6 +101,7 @@ const Article = styled.article`
 
 const GetStarted = styled.a`
   margin-top: 2rem;
+
   width: 280px;
   height: 57px;
   padding: 0.4rem 2rem;
@@ -117,7 +118,7 @@ const GetStarted = styled.a`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 500px) {
+  @media (max-width: 800px) {
     font-size: 17px;
     width: 200px;
   }
@@ -137,7 +138,7 @@ const Title = styled.div`
   letter-spacing: 20px;
   padding: 20px;
 
-  @media (max-width: 500px) {
+  @media (max-width: 800px) {
     font-size: 17px;
     letter-spacing: 13px;
   }

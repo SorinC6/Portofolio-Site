@@ -46,7 +46,7 @@ const MissionContainer = styled.section`
     props.background ? props.background : "darkred"};
   flex-wrap: nowrap;
   max-width: 80%;
-  height: 430px;
+  height: 450px;
   margin-top: 50px;
   @media (max-width: 800px) {
     height: 500px;

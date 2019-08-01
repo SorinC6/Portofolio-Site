@@ -37,7 +37,7 @@ const Projects = () => {
           gitHubLink="https://github.com/SorinC6/error-handler-express"
           title="NPM Package"
           text="Error-Express-Handler is a easy middleware with build in errors messages for the most commun http errors in an express application. Using this package the user no longer have to put the code status and the message for the error"
-          background="blue"
+          background="darkblue"
         />
         <CardsWrapper>
           <ProjectCard

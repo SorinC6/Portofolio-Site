@@ -16,6 +16,15 @@ const Projects = () => {
         <h4>Portofolio</h4>
         <h5>Some of my Work so far</h5>
         <BigProjectCard
+          deployment="https://niyonapp.com/"
+          gitHubLink="https://github.com/labseu2-niyon"
+          title="Niyon"
+          text="Niyon is an online platform that aims to connect young coders with mentors. 
+          Starting a job in a new location or new industry is extremely difficult. 
+          Niyon helps young professionals increase their confidence skills, meet colleagues in a new location and find support to help them develop the skills needed for their coding career. Niyon will be launching a pilot of its mentorship platform in West Africa and aims to reduce the unemployment rate in those countries."
+          background="#348FBB"
+        />
+        <BigProjectCard
           deployment="https://unsilenced.space/"
           gitHubLink="https://github.com/unsilenced-project"
           title="Unsilenced"

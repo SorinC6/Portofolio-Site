@@ -26,7 +26,7 @@ class Home extends Component {
           <Particles />
           <TextWrapper>
             <Flip left>
-              <NameWrapper>Chis Sorin</NameWrapper>
+              <NameWrapper>Sorin Chis</NameWrapper>
               <h2>Full Stack Developer</h2>
             </Flip>
             <ButtonWrapper onClick={this.scrollToAbout}>

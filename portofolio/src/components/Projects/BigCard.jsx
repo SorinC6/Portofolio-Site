@@ -1,25 +1,25 @@
 import React from "react";
-import Flip from "react-reveal/Flip";
+//import Flip from "react-reveal/Flip";
 import styled, { css } from "styled-components";
 import { SocialWrapper, AWrapper } from "./ProjectStyles";
 
 const BigCard = ({ title, text, deployment, gitHubLink, background }) => {
   return (
     <MissionContainer background={background}>
-      <Flip bottom>
-        <Article>
-          <Title>={title}</Title>
-          <p>{text}</p>
-          <GetStarted href={deployment} target="_blank">
-            View Project
-          </GetStarted>
-          <SocialWrapper>
-            <AWrapper href={gitHubLink} target="_blank">
-              <i className="fab fa-github" />
-            </AWrapper>
-          </SocialWrapper>
-        </Article>
-      </Flip>
+      {/* <Flip bottom> */}
+      <Article>
+        <Title>={title}</Title>
+        <p>{text}</p>
+        <GetStarted href={deployment} target="_blank">
+          View Project
+        </GetStarted>
+        <SocialWrapper>
+          <AWrapper href={gitHubLink} target="_blank">
+            <i className="fab fa-github" />
+          </AWrapper>
+        </SocialWrapper>
+      </Article>
+      {/* </Flip> */}
     </MissionContainer>
   );
 };
@@ -46,10 +46,10 @@ const MissionContainer = styled.section`
     props.background ? props.background : "darkred"};
   flex-wrap: nowrap;
   max-width: 80%;
-  height: 450px;
+  height: 100%;
   margin-top: 50px;
   @media (max-width: 800px) {
-    height: 500px;
+    height: 100%;
   }
 `;
 const Article = styled.article`

@@ -20,7 +20,7 @@ export const ContentWrapper = styled.div`
 
 export const ProfileImg = styled.img`
   border-radius: 50%;
-  width: 300px;
+  width: 200px;
   transition: transform 1s;
 
   &:hover {
@@ -35,7 +35,7 @@ export const Description = styled.div`
   display: flex;
   align-items: center;
   width: 80%;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 0 50px;
   @media (max-width: 800px) {
     flex-direction: column;
@@ -55,7 +55,7 @@ export const TextContainer = styled.div`
     margin: 0;
   }
   p {
-    font-size: 20px;
+    font-size: 17px;
     padding: 10px;
     text-align: justify;
   }

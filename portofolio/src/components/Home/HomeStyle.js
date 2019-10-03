@@ -20,7 +20,7 @@ export const TextWrapper = styled.div`
 
   h2 {
     margin: 10px;
-    font-size: 40px;
+    font-size: 20px;
     letter-spacing: 10px;
     color: darkgray;
     text-align: center;
@@ -55,14 +55,14 @@ export const NameWrapper = styled.h1`
 `;
 
 export const ButtonWrapper = styled.a`
-  margin: 20px;
+  margin: 40px;
   text-decoration: none;
   color: white;
   font-family: sans-serif;
-  font-size: 30px;
+  font-size: 25px;
   border: 3px solid white;
   border-radius: 10px;
-  padding: 20px 40px;
+  padding: 15px 25px;
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -104,7 +104,7 @@ export const SocialWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin: 20px;
-  width: 140px;
+  width: 100px;
   position: relative;
   @media (max-width: 1000px) {
     flex-direction: row;
@@ -116,7 +116,7 @@ export const SocialWrapper = styled.div`
 `;
 
 export const AWrapper = styled.a`
-  font-size: 60px;
+  font-size: 40px;
   padding: 10px 20px;
   margin: 0 20px;
   box-shadow: 0 15px 10px #777;

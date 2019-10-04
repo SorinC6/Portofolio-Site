@@ -60,8 +60,18 @@ const MissionContainer = styled.section`
   max-width: 80%;
   height: 100%;
   margin-top: 50px;
+  border-radius: 8px;
+  box-shadow: 0 20px 50px rgba(123, 122, 170, 0.7);
+
+  transition: all 500ms;
+
   @media (max-width: 800px) {
     height: 100%;
+  }
+
+  &:hover {
+    transform: scale(1.025);
+    box-shadow: 0 20px 50px rgba(59, 43, 91, 0.7);
   }
 `;
 const Article = styled.article`

@@ -7,6 +7,7 @@ import book from "../assets/book.png";
 import soup from "../assets/soup.png";
 import soupb from "../assets/soupb.png";
 import shop from "../assets/shop-phones.png";
+import animation from "../assets/animation.png";
 import { ProjectsWrapper, CardsWrapper } from "./ProjectStyles";
 
 const Projects = () => {
@@ -79,9 +80,11 @@ const Projects = () => {
             gitHubLink="https://github.com/SorinC6/E-Commerce-App-React-Redux"
           />
           <ProjectCard
-            img={testImg}
-            title="Empty Card for future project"
-            description="lorem ipsus lorem ipsus lorem ipsuslorem ipsuslorem ipsus lorem ipsuslorem ipsus"
+            img={animation}
+            title="Animation with Styled Component"
+            description="Experimenting with Css animation and Styled Components"
+            link="https://naughty-pike-4d5a8f.netlify.com/"
+            gitHubLink="https://github.com/SorinC6/CSS-Animation-with-React"
           />
           <ProjectCard
             img={testImg}

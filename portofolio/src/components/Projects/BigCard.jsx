@@ -166,7 +166,7 @@ const VideoWrapper = styled.a`
   color: #262626;
   font-size: 20px;
   letter-spacing: 2px;
-  border: 5px solid #262626;
+  border: 2px dashed #262626;
   position: relative;
   transition: 1s;
   z-index: 1;

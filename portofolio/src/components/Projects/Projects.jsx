@@ -23,6 +23,7 @@ const Projects = () => {
           Starting a job in a new location or new industry is extremely difficult. 
           Niyon helps young professionals increase their confidence skills, meet colleagues in a new location and find support to help them develop the skills needed for their coding career. Niyon will be launching a pilot of its mentorship platform in West Africa and aims to reduce the unemployment rate in those countries."
           background="#348FBB"
+          video="https://www.youtube.com/watch?v=4YFwmw08nzA&amp=&feature=youtu.be"
         />
         <BigProjectCard
           deployment="https://unsilenced.space/"

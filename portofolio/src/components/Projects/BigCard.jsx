@@ -3,7 +3,14 @@ import Flip from "react-reveal/Flip";
 import styled, { css } from "styled-components";
 import { SocialWrapper, AWrapper } from "./ProjectStyles";
 
-const BigCard = ({ title, text, deployment, gitHubLink, background }) => {
+const BigCard = ({
+  title,
+  text,
+  deployment,
+  gitHubLink,
+  background,
+  video
+}) => {
   return (
     <MissionContainer background={background}>
       <Flip bottom>
@@ -13,6 +20,11 @@ const BigCard = ({ title, text, deployment, gitHubLink, background }) => {
           <GetStarted href={deployment} target="_blank">
             View Project
           </GetStarted>
+          {video && (
+            <VideoWrapper href={video} target="_blank">
+              Video Presentation
+            </VideoWrapper>
+          )}
           <SocialWrapper>
             <AWrapper href={gitHubLink} target="_blank">
               <i className="fab fa-github" />
@@ -143,5 +155,52 @@ const Title = styled.div`
   @media (max-width: 800px) {
     font-size: 17px;
     letter-spacing: 13px;
+  }
+`;
+
+const VideoWrapper = styled.a`
+  padding: 15px 25px;
+  margin: 20px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #262626;
+  font-size: 20px;
+  letter-spacing: 2px;
+  border: 5px solid #262626;
+  position: relative;
+  transition: 1s;
+  z-index: 1;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: purple;
+    z-index: -1;
+    transition: 1s;
+    transform: rotateX(90deg);
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: purple;
+    z-index: -1;
+    transition: 1s;
+    transform: rotateY(90deg);
+  }
+  &:hover:before {
+    transform: rotateX(0deg);
+  }
+  &:hover:after {
+    transform: rotateY(0deg);
+  }
+  &:hover {
+    color: white;
   }
 `;

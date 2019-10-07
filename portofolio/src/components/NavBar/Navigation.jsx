@@ -2,12 +2,9 @@ import React, { Component } from "react";
 import { Element, Link } from "react-scroll";
 import styled from "styled-components";
 import LightSpeed from "react-reveal/LightSpeed";
+import Context from "../context";
 
-class Navigation extends Component {
-  state = {
-    mobileMenu: false
-  };
-
+const Navigation = () => {
   //   scrollToHome = () => {
   //     scroller.scrollTo("Home", {
   //       duration: 500,
@@ -16,55 +13,53 @@ class Navigation extends Component {
   //     });
   //   };
 
-  render() {
-    return (
-      <Element name="NavBar">
-        <LightSpeed cascade>
-          <NavWrapper>
-            <NavContainer>
-              <CostumLink
-                activeClass="active"
-                to="Home"
-                spy={true}
-                smooth={true}
-                duration={500}
-              >
-                Home
-              </CostumLink>
-              <CostumLink
-                activeClass="active"
-                to="About"
-                spy={true}
-                smooth={true}
-                duration={500}
-              >
-                About
-              </CostumLink>
-              <CostumLink
-                activeClass="active"
-                to="Projects"
-                spy={true}
-                smooth={true}
-                duration={500}
-              >
-                Projects
-              </CostumLink>
-              <CostumLink
-                activeClass="active"
-                to="Contact"
-                spy={true}
-                smooth={true}
-                duration={500}
-              >
-                Contact
-              </CostumLink>
-            </NavContainer>
-          </NavWrapper>
-        </LightSpeed>
-      </Element>
-    );
-  }
-}
+  return (
+    <Element name="NavBar">
+      <LightSpeed cascade>
+        <NavWrapper>
+          <NavContainer>
+            <CostumLink
+              activeClass="active"
+              to="Home"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              Home
+            </CostumLink>
+            <CostumLink
+              activeClass="active"
+              to="About"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              About
+            </CostumLink>
+            <CostumLink
+              activeClass="active"
+              to="Projects"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              Projects
+            </CostumLink>
+            <CostumLink
+              activeClass="active"
+              to="Contact"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              Contact
+            </CostumLink>
+          </NavContainer>
+        </NavWrapper>
+      </LightSpeed>
+    </Element>
+  );
+};
 
 export default Navigation;
 

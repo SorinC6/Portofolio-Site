@@ -23,6 +23,7 @@ import {
 
 const About = props => {
   const [modal, setModal] = useState(false);
+  const { state, dispatch } = useContext(Context);
 
   const toggleModal = () => {
     setModal(!modal);
@@ -31,8 +32,6 @@ const About = props => {
   const closeModal = () => {
     setModal(false);
   };
-
-  const { state, dispatch } = useContext(Context);
 
   return (
     <Element name="About">

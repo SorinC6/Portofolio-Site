@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useContext, useReducer } from "react";
 import "./App.css";
+import Context from "./components/context";
+import reducer from "./components/reducer";
 import Sticky from "react-sticky-el";
 import Home from "./components/Home/index";
 import Navigation from "./components/NavBar/Navigation";
@@ -12,11 +14,13 @@ function App() {
   const initialValue = {
     color: "black"
   };
-  const MyContext = React.createContext(initialValue);
+
+  const initialState = useContext(Context);
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
     <div>
-      <MyContext.Provider value={initialValue}>
+      <Context.Provider value={{ state, dispatch }}>
         <Home />
         <St>
           <Navigation />
@@ -24,7 +28,7 @@ function App() {
         <About />
         <Projects />
         <Contact />
-      </MyContext.Provider>
+      </Context.Provider>
     </div>
   );
 }

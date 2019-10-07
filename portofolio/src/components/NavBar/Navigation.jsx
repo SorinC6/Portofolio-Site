@@ -1,22 +1,17 @@
-import React, { Component } from "react";
+import React, { useContext } from "react";
 import { Element, Link } from "react-scroll";
 import styled from "styled-components";
 import LightSpeed from "react-reveal/LightSpeed";
 import Context from "../context";
 
 const Navigation = () => {
-  //   scrollToHome = () => {
-  //     scroller.scrollTo("Home", {
-  //       duration: 500,
-  //       delay: 2,
-  //       smooth: true
-  //     });
-  //   };
+  const { state, dispatch } = useContext(Context);
+  console.log(state);
 
   return (
     <Element name="NavBar">
       <LightSpeed cascade>
-        <NavWrapper>
+        <NavWrapper color={state.navColor}>
           <NavContainer>
             <CostumLink
               activeClass="active"
@@ -66,12 +61,12 @@ export default Navigation;
 const NavWrapper = styled.div`
   max-width: 100%;
   height: 80px;
-  background: #ffc21c;
+  /* background: #ffc21c; */
   border-bottom: 3px dotted #e5e5e5;
   box-shadow: inset 0 -1px 0 0 #e5e5e5, inset 0 1px 0 0 #e5e5e5,
     0 1px 0 0 #e5e5e5, 0 -1px 0;
   z-index: 200;
-  /* background-color: black; */
+  background-color: ${props => props.color};
 `;
 
 const NavContainer = styled.div`
@@ -82,6 +77,7 @@ const NavContainer = styled.div`
   height: 100%;
   margin: 0 auto;
   position: relative;
+  transition: 1s all;
 `;
 
 const CostumLink = styled(Link)`

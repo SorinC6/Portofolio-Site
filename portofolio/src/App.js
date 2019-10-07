@@ -9,15 +9,22 @@ import Contact from "./components/Contact/Contact";
 import styled from "styled-components";
 
 function App() {
+  const initialValue = {
+    color: "black"
+  };
+  const MyContext = React.createContext(initialValue);
+
   return (
     <div>
-      <Home />
-      <St>
-        <Navigation />
-      </St>
-      <About />
-      <Projects />
-      <Contact />
+      <MyContext.Provider value={initialValue}>
+        <Home />
+        <St>
+          <Navigation />
+        </St>
+        <About />
+        <Projects />
+        <Contact />
+      </MyContext.Provider>
     </div>
   );
 }

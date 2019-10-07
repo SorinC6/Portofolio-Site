@@ -76,6 +76,7 @@ const NavWrapper = styled.div`
   box-shadow: inset 0 -1px 0 0 #e5e5e5, inset 0 1px 0 0 #e5e5e5,
     0 1px 0 0 #e5e5e5, 0 -1px 0;
   z-index: 200;
+  /* background-color: black; */
 `;
 
 const NavContainer = styled.div`

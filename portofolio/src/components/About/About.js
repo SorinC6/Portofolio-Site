@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Element } from "react-scroll";
 import Context from "../context";
 import profileImg from "../assets/profile.jpg";
@@ -7,6 +7,7 @@ import Icon from "./Icon";
 import PDF from "../PdfComponent/PDF";
 import Skills from "./Skills";
 import Particles from "../Particles/index";
+import handleViewport from "react-in-viewport";
 
 import {
   AboutWrapper,
@@ -24,6 +25,19 @@ import {
 const About = props => {
   const [modal, setModal] = useState(false);
   const { state, dispatch } = useContext(Context);
+  const { inViewport, enterCount } = props;
+
+  if (inViewport && enterCount === 1) {
+    dispatch({ type: "ABOUT_PAGE", payload: "green" });
+  }
+  console.log(inViewport, enterCount);
+
+  useEffect(() => {
+    console.log("About Monted");
+    return () => {
+      console.log("About Unmonted");
+    };
+  });
 
   const toggleModal = () => {
     setModal(!modal);
@@ -103,4 +117,6 @@ const About = props => {
   );
 };
 
-export default About;
+const MySection = handleViewport(About, { rootMargin: "-1.0px" });
+
+export default MySection;

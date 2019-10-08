@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useContext } from "react";
 import { Element } from "react-scroll";
+import Context from "../context";
 import ProjectCard from "./ProjectCard";
 import BigProjectCard from "./BigCard";
 import testImg from "../assets/test.png";
@@ -11,6 +12,14 @@ import animation from "../assets/animation.png";
 import { ProjectsWrapper, CardsWrapper } from "./ProjectStyles";
 
 const Projects = () => {
+  const { state, dispatch } = useContext(Context);
+
+  useEffect(() => {
+    console.log("Project Monted");
+    return () => {
+      console.log("Project Unmonted");
+    };
+  });
   return (
     <Element name="Projects">
       <ProjectsWrapper>

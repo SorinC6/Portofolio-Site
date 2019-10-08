@@ -8,6 +8,7 @@
     "react": "^16.8.6",
     "react-circular-progressbar": "^2.0.1",
     "react-dom": "^16.8.6",
+    "react-in-viewport": "^1.0.0-alpha.9",
     "react-modal": "^3.8.1",
     "react-particles-js": "^2.6.0",
     "react-pdfobject": "^1.1.1",

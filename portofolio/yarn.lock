@@ -5095,7 +5095,7 @@ hmac-drbg@^1.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
-hoist-non-react-statics@^3.1.0, hoist-non-react-statics@^3.2.1:
+hoist-non-react-statics@^3.0.0, hoist-non-react-statics@^3.1.0, hoist-non-react-statics@^3.2.1:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.0.tgz#b09178f0122184fb95acf525daaecb4d8f45958b"
   integrity sha512-0XsbTXxgiaCDYDIWFcwkmerZPSwywfUqYmwT4jzewKTQSWoE6FCMoUVOeBJWK3E/CrWbxRG3m5GzY4lnIwGRBA==
@@ -8754,6 +8754,13 @@ react-event-listener@^0.6.6:
     "@babel/runtime" "^7.2.0"
     prop-types "^15.6.0"
     warning "^4.0.1"
+
+react-in-viewport@^1.0.0-alpha.9:
+  version "1.0.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/react-in-viewport/-/react-in-viewport-1.0.0-alpha.9.tgz#f3806011fc10cdd8ed1a951668516656f08fb620"
+  integrity sha512-gLpWznDzizYQRgaf3yXtv5mJKU1T7gUfmmJuSuOCF8a5/G63K53jd6UlgYRshUwxNI3RHf75zUOzdgsKykIpGw==
+  dependencies:
+    hoist-non-react-statics "^3.0.0"
 
 react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.0, react-is@^16.8.4:
   version "16.8.6"

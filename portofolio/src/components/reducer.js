@@ -4,25 +4,30 @@ export default function reducer(state, { type, payload }) {
       return {
         ...state,
         navColor: "#ffc21c",
-        height: "80px"
+        height: "60px"
       };
     case "ABOUT_PAGE":
       return {
         ...state,
         navColor: "seashell",
-        height: "70px"
+        height: "60px"
       };
     case "PROJECT_PAGE":
       return {
         ...state,
         navColor: "#F2A359",
-        height: "70px"
+        height: "60px"
       };
     case "CONTACT_PAGE":
       return {
         ...state,
         navColor: "#06656E",
-        height: "70px"
+        height: "60px"
+      };
+    case "SCROLL_UP":
+      return {
+        ...state,
+        height: "80px"
       };
     default:
       return state;

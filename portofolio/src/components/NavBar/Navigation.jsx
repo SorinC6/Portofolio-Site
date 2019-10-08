@@ -120,7 +120,8 @@ const CostumLink = styled(Link)`
     color: red;
     background-color: #fafad2;
     font-size: 16px;
-    padding: 16px;
-    border-radius: 40%;
+    padding: 10px;
+    border-radius: 10%;
+    transition: 200ms all;
   }
 `;

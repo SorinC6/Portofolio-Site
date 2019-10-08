@@ -14,10 +14,12 @@ import {
 
 const Home = () => {
   const [theposition, setPosition] = useState(0);
+  const [scrollUp, setScrollUp] = useState(false);
   const { state, dispatch } = useContext(Context);
 
   useEffect(() => {
     window.addEventListener("scroll", listenToScroll);
+    window.addEventListener("scroll", e => handleScrollDirection(e));
 
     return () => {
       window.removeEventListener("scroll", listenToScroll);
@@ -25,12 +27,10 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    console.log(theposition);
-
+    //console.log(theposition);
     if (theposition > 0.09) {
       dispatch({ type: "ABOUT_PAGE" });
     } else if (theposition > 0) {
-      console.log("WAHAAA");
       dispatch({ type: "HOME_PAGE" });
     }
     if (theposition > 0.3) {
@@ -39,7 +39,11 @@ const Home = () => {
     if (theposition > 0.96) {
       dispatch({ type: "CONTACT_PAGE" });
     }
-  }, [theposition]);
+
+    if (scrollUp) {
+      dispatch({ type: "SCROLL_UP" });
+    }
+  }, [theposition, scrollUp]);
 
   const listenToScroll = () => {
     const winScroll =
@@ -54,18 +58,21 @@ const Home = () => {
     setPosition(Number(scrolled.toFixed(3)));
   };
 
+  let prev = window.scrollY;
   const handleScrollDirection = e => {
     const window = e.currentTarget;
-
-    if (this.prev > window.scrollY) {
-      console.log("scrolling up");
-    } else if (this.prev < window.scrollY) {
+    //console.log(prev);
+    if (prev > window.scrollY) {
+      //console.log("scrolling up");
+      setScrollUp(true);
+    } else if (prev < window.scrollY) {
       console.log("scrolling down");
+      setScrollUp(false);
     }
-    this.prev = window.scrollY;
+
+    prev = window.scrollY;
   };
 
-  
   const scrollToAbout = () => {
     scroller.scrollTo("About", {
       duration: 500,
@@ -73,7 +80,7 @@ const Home = () => {
       smooth: true
     });
   };
-
+  console.log(scrollUp);
   return (
     <Element name="Home">
       <HomeWrapper>

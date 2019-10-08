@@ -6,12 +6,12 @@ import Context from "../context";
 
 const Navigation = () => {
   const { state, dispatch } = useContext(Context);
-  console.log(state);
+  //console.log(state);
 
   return (
     <Element name="NavBar">
       <LightSpeed cascade>
-        <NavWrapper color={state.navColor}>
+        <NavWrapper color={state.navColor} height={state.height}>
           <NavContainer>
             <CostumLink
               activeClass="active"
@@ -60,13 +60,13 @@ export default Navigation;
 
 const NavWrapper = styled.div`
   max-width: 100%;
-  height: 80px;
+  height: ${props => props.height};
   /* background: #ffc21c; */
-  border-bottom: 3px dotted #e5e5e5;
-  box-shadow: inset 0 -1px 0 0 #e5e5e5, inset 0 1px 0 0 #e5e5e5,
-    0 1px 0 0 #e5e5e5, 0 -1px 0;
+  /* border-bottom: 3px dotted #e5e5e5; */
+  box-shadow: 0px 4px 7px #777;
   z-index: 200;
   background-color: ${props => props.color};
+  transition: 1s all;
 `;
 
 const NavContainer = styled.div`

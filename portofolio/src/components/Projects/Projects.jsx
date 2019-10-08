@@ -12,14 +12,6 @@ import animation from "../assets/animation.png";
 import { ProjectsWrapper, CardsWrapper } from "./ProjectStyles";
 
 const Projects = () => {
-  const { state, dispatch } = useContext(Context);
-
-  useEffect(() => {
-    console.log("Project Monted");
-    return () => {
-      console.log("Project Unmonted");
-    };
-  });
   return (
     <Element name="Projects">
       <ProjectsWrapper>

@@ -24,20 +24,6 @@ import {
 
 const About = props => {
   const [modal, setModal] = useState(false);
-  const { state, dispatch } = useContext(Context);
-  const { inViewport, enterCount } = props;
-
-  if (inViewport && enterCount === 1) {
-    dispatch({ type: "ABOUT_PAGE", payload: "green" });
-  }
-  console.log(inViewport, enterCount);
-
-  useEffect(() => {
-    console.log("About Monted");
-    return () => {
-      console.log("About Unmonted");
-    };
-  });
 
   const toggleModal = () => {
     setModal(!modal);

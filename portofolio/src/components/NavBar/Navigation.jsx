@@ -19,6 +19,7 @@ const Navigation = () => {
               spy={true}
               smooth={true}
               duration={500}
+              textColor={state.textColor}
             >
               Home
             </CostumLink>
@@ -28,6 +29,7 @@ const Navigation = () => {
               spy={true}
               smooth={true}
               duration={500}
+              textColor={state.textColor}
             >
               About
             </CostumLink>
@@ -37,6 +39,7 @@ const Navigation = () => {
               spy={true}
               smooth={true}
               duration={500}
+              textColor={state.textColor}
             >
               Projects
             </CostumLink>
@@ -46,6 +49,7 @@ const Navigation = () => {
               spy={true}
               smooth={true}
               duration={500}
+              textColor={state.textColor}
             >
               Contact
             </CostumLink>
@@ -81,7 +85,7 @@ const NavContainer = styled.div`
 `;
 
 const CostumLink = styled(Link)`
-  color: blue;
+  color: ${props => props.textColor};
   padding: 10px;
   cursor: pointer;
 

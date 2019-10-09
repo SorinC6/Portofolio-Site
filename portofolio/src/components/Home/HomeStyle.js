@@ -24,6 +24,7 @@ export const TextWrapper = styled.div`
     letter-spacing: 10px;
     color: darkgray;
     text-align: center;
+    cursor: cell;
   }
 
   button {
@@ -43,6 +44,7 @@ export const NameWrapper = styled.h1`
     0 4px 0 #efefef, 0 30px 5px rgba(0, 0, 0, 0.1);
   animation: float 2s linear infinite;
   animation-direction: alternate;
+  cursor: cell;
 
   @keyframes float {
     from {

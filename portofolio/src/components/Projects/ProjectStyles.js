@@ -182,4 +182,5 @@ export const AWrapper = styled.a`
   border-radius: 50%;
   margin: 0 20px;
   box-shadow: 0 15px 10px #777;
+  transition: 500ms all;
 `;

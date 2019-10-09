@@ -57,7 +57,7 @@ const MissionContainer = styled.section`
   background-color: ${props =>
     props.background ? props.background : "darkred"};
   flex-wrap: nowrap;
-  max-width: 80%;
+  max-width: 65%;
   height: 100%;
   margin-top: 50px;
   border-radius: 8px;
@@ -68,9 +68,12 @@ const MissionContainer = styled.section`
   @media (max-width: 800px) {
     height: 100%;
   }
+  @media (max-width: 500px) {
+    max-width: 90%;
+  }
 
   &:hover {
-    transform: scale(1.025);
+    transform: scale(1.015);
     box-shadow: 0 20px 50px rgba(59, 43, 91, 0.7);
   }
 `;
@@ -90,7 +93,7 @@ const Article = styled.article`
     line-height: 1.5;
     text-align: justify;
     padding-top: 1rem;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     @media (max-width: 500px) {
       width: 250px;
     }
@@ -124,14 +127,14 @@ const Article = styled.article`
 const GetStarted = styled.a`
   margin-top: 2rem;
 
-  width: 280px;
-  height: 57px;
+  width: 220px;
+  height: 40px;
   padding: 0.4rem 2rem;
   background-color: #fff;
   text-align: center;
   line-height: 35px;
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   color: darkred;
   text-transform: uppercase;
   -webkit-transition: all 0.25s ease-in-out;
@@ -169,12 +172,12 @@ const Title = styled.div`
 `;
 
 const VideoWrapper = styled.a`
-  padding: 15px 25px;
+  padding: 12px 22px;
   margin: 20px;
   font-family: sans-serif;
   text-decoration: none;
   color: #262626;
-  font-size: 20px;
+  font-size: 17px;
   letter-spacing: 2px;
   border: 2px dashed #262626;
   position: relative;

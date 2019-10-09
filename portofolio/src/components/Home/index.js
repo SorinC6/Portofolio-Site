@@ -66,7 +66,6 @@ const Home = () => {
       //console.log("scrolling up");
       setScrollUp(true);
     } else if (prev < window.scrollY) {
-      console.log("scrolling down");
       setScrollUp(false);
     }
 
@@ -80,7 +79,6 @@ const Home = () => {
       smooth: true
     });
   };
-  console.log(scrollUp);
   return (
     <Element name="Home">
       <HomeWrapper>

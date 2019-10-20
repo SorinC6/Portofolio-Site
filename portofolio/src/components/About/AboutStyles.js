@@ -138,7 +138,7 @@ export const SkillsWrapper = styled.div`
   flex-wrap: wrap;
   width: 100%;
   margin-top: 100px;
-  background-color: darkred;
+  background-color: ${props => props.theme.background};
   border: 1px solid black;
   color: white;
   opacity: 0.9;

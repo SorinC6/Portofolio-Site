@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContactWrapper = styled.div`
   @import url("https://fonts.googleapis.com/css?family=Monda|Special+Elite&display=swap");
   font-family: "Special Elite", cursive;
-  background: #254e70;
+  background: ${props => props.theme.contactBackground};
   height: 800px;
   padding-top: 20px;
   display: flex;

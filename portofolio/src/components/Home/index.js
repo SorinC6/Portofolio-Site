@@ -33,11 +33,17 @@ const Home = () => {
     } else if (theposition > 0) {
       dispatch({ type: "HOME_PAGE" });
     }
-    if (theposition > 0.3) {
-      dispatch({ type: "PROJECT_PAGE" });
+    if (theposition > 0.35) {
+      dispatch({
+        type: "PROJECT_PAGE",
+        payload: props => props.theme.projectNav
+      });
     }
     if (theposition > 0.96) {
-      dispatch({ type: "CONTACT_PAGE" });
+      dispatch({
+        type: "CONTACT_PAGE",
+        payload: props => props.theme.contactNav
+      });
     }
 
     if (scrollUp) {

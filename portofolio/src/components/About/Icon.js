@@ -37,7 +37,7 @@ const Wrapper = styled.div`
     color: darkkhaki;
     transition: 1s all;
     &:hover {
-      color: darkred;
+      color: ${props => props.theme.background};
     }
   }
 `;

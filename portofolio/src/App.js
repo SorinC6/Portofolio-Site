@@ -9,16 +9,20 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import styled, { ThemeProvider } from "styled-components";
+import { lighten, darken } from "polished";
 
 const theme = {
   primary: "#f0ece9",
   secondary: "#666564",
   h2: "#666564",
-  background: "#0091cf"
+  background: "#0091cf",
+  projectBackground: darken(0.1, "#0091cf"),
+  projectNav: darken(0.1, "#f0ece9"),
+  contactBackground: darken(0.2, "#0091cf"),
+  contactNav: darken(0.2, "#f0ece9")
 };
 
 function App() {
-
   const initialState = useContext(Context);
   const [state, dispatch] = useReducer(reducer, initialState);
 

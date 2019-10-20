@@ -6,7 +6,7 @@ export const ProjectsWrapper = styled.div`
   @import url("https://fonts.googleapis.com/css?family=Monda|Special+Elite&display=swap");
   font-family: "Special Elite", cursive;
   padding-top: 100px;
-  background: #f2a359;
+  background: ${props => props.theme.projectBackground};
   display: flex;
   flex-direction: column;
   align-items: center;

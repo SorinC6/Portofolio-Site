@@ -15,8 +15,7 @@ const Projects = () => {
   return (
     <Element name="Projects">
       <ProjectsWrapper>
-        <h4>Portofolio</h4>
-        <h5>Some of my Work so far</h5>
+        <h4>Projects</h4>
         <BigProjectCard
           deployment="https://niyonapp.com/"
           gitHubLink="https://github.com/labseu2-niyon"

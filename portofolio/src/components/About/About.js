@@ -44,12 +44,11 @@ const About = props => {
             <TextContainer>
               <Flip left>
                 <p>
-                  Enthusiast programmer, passionate about clean and organized
-                  code. I like to code things from scratch, and enjoy bringing
-                  ideas to life in the browser. Naturally curious and constantly
-                  challenging myself with every chance I’ve got, I believe in
-                  the idea of using software to sole practical problem and
-                  transform the live of people around the world
+                  Fanatical about clean and organized code as a tool for
+                  breathing life into ideas. With the browser as a canvas and
+                  the latest full-stack web technologies as the medium, my end
+                  goal is practical problem solving that transforms the lives of
+                  real people.
                 </p>
               </Flip>
               <ResumeButton onClick={toggleModal}>RESUME HERE</ResumeButton>
@@ -57,13 +56,13 @@ const About = props => {
           </Description>
           <SkillsWrapper>
             <Particles />
-            <Skills name="js" value="75" />
-            <Skills name="react" value="90" />
-            <Skills name="node" value="80" />
+            <Skills name="js" />
+            <Skills name="react" />
+            <Skills name="node" />
             {/* <Skills name="Redux" img={reduxlogo} name="Redux" value="85" /> */}
-            <Skills name="java" value="60" />
-            <Skills name="html5" value="95" />
-            <Skills name="css3" value="90" />
+            <Skills name="java" />
+            <Skills name="html5" />
+            <Skills name="css3" />
           </SkillsWrapper>
           <BuildWrapper>
             <TextSwitch>

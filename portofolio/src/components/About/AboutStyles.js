@@ -67,25 +67,25 @@ export const ResumeButton = styled.a`
   margin-top: 10px;
   text-decoration: none;
   font-size: 20px;
-  border: 3px solid black;
+  border: 1px solid black;
   padding: 10px 20px;
   transition: all 0.5s;
   &:hover {
-    border: 3px solid darkred;
-    color: yellow;
-    background: lightslategray;
+    border: 1px solid ${props => props.theme.h2};
+    color: ${props => props.theme.primary};
+    background: ${props => props.theme.background};
     animation: shake 0.4s linear 1;
     cursor: pointer;
   }
   @keyframes shake {
     33% {
-      transform: rotate(10deg);
+      transform: rotate(7deg);
     }
     66% {
-      transform: rotate(-10deg);
+      transform: rotate(-7deg);
     }
     100% {
-      transform: rotate(10deg);
+      transform: rotate(7deg);
     }
   }
 `;
@@ -144,10 +144,6 @@ export const SkillsWrapper = styled.div`
   opacity: 0.9;
   padding: 20px 10px;
   i {
-    font-size: 50px;
-
-    @media (max-width: 1000px) {
-      font-size: 50px;
-    }
+    font-size: 38px;
   }
 `;

@@ -2,7 +2,7 @@ import React, { useContext, useReducer } from "react";
 import "./App.css";
 import Context from "./components/context";
 import reducer from "./components/reducer";
-import Sticky from "react-sticky-el";
+// import Sticky from "react-sticky-el";
 import Home from "./components/Home/index";
 import Navigation from "./components/NavBar/Navigation";
 import About from "./components/About/About";
@@ -18,9 +18,6 @@ const theme = {
 };
 
 function App() {
-  const initialValue = {
-    color: "black"
-  };
 
   const initialState = useContext(Context);
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -44,8 +41,9 @@ function App() {
 
 export default App;
 
-const St = styled(Sticky)`
-  position: absolute;
+const St = styled.div`
+  position: sticky;
+  top: 0;
   z-index: 100;
   width: 100%;
 `;

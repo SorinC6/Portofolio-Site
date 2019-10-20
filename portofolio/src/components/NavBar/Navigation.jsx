@@ -19,7 +19,7 @@ const Navigation = () => {
               spy={true}
               smooth={true}
               duration={500}
-              textColor={state.textColor}
+              color={props => props.theme.primary}
             >
               Home
             </CostumLink>
@@ -29,7 +29,7 @@ const Navigation = () => {
               spy={true}
               smooth={true}
               duration={500}
-              textColor={state.textColor}
+              color={props => props.theme.primary}
             >
               About
             </CostumLink>
@@ -39,7 +39,7 @@ const Navigation = () => {
               spy={true}
               smooth={true}
               duration={500}
-              textColor={state.textColor}
+              color={props => props.theme.primary}
             >
               Projects
             </CostumLink>
@@ -49,7 +49,7 @@ const Navigation = () => {
               spy={true}
               smooth={true}
               duration={500}
-              textColor={state.textColor}
+              color={props => props.theme.primary}
             >
               Contact
             </CostumLink>
@@ -121,11 +121,11 @@ const CostumLink = styled(Link)`
   }
 
   &.active {
-    color: red;
-    background-color: #fafad2;
+    color: black;
+    /* background-color: #fafad2; */
     font-size: 16px;
     padding: 10px;
-    border-radius: 10%;
+    /* border-radius: 10%; */
     transition: 200ms all;
   }
 `;

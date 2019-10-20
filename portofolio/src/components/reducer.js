@@ -3,23 +3,20 @@ export default function reducer(state, { type, payload }) {
     case "HOME_PAGE":
       return {
         ...state,
-        navColor: "#ffc21c",
+        navColor: "#f0ece9",
         height: "60px",
-        textColor: "blue"
       };
     case "ABOUT_PAGE":
       return {
         ...state,
         navColor: "seashell",
         height: "60px",
-        textColor: "blue"
       };
     case "PROJECT_PAGE":
       return {
         ...state,
         navColor: "#F2A359",
         height: "60px",
-        textColor: "blue"
       };
     case "CONTACT_PAGE":
       return {

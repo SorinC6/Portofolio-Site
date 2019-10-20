@@ -1,7 +1,7 @@
 import { createContext } from "react";
 
 const Context = createContext({
-  navColor: "#ffc21c",
+  navColor: "#f0ece9",
   height: "80px",
   textColor: "blue"
 });

@@ -1,7 +1,7 @@
 import styled from "styled-components";
-
+import { darken } from "polished";
 export const HomeWrapper = styled.div`
-  background: darkred;
+  background: ${props => props.theme.background};
   height: 100vh;
 `;
 
@@ -20,9 +20,9 @@ export const TextWrapper = styled.div`
 
   h2 {
     margin: 10px;
-    font-size: 20px;
+    font-size: 25px;
     letter-spacing: 10px;
-    color: darkgray;
+    color: ${props => props.theme.h2};
     text-align: center;
     cursor: cell;
   }
@@ -36,16 +36,16 @@ export const TextWrapper = styled.div`
 
 export const NameWrapper = styled.h1`
   margin: 30px;
-  font-size: 55px;
+  font-size: 50px;
   letter-spacing: 22px;
-  font-weight: bold;
+  /* font-weight: bold; */
   text-align: center;
-  text-shadow: 0 1px 0 #efefef, 0 2px 0 #efefef, 0 3px 0 #efefef,
-    0 4px 0 #efefef, 0 30px 5px rgba(0, 0, 0, 0.1);
+  /* text-shadow: 0 1px 0 #666564, 0 2px 0 #666564, 0 3px 0 #666564,
+    0 4px 0 #666564, 0 30px 5px rgba(0, 0, 0, 0.1); */
   animation: float 2s linear infinite;
   animation-direction: alternate;
   cursor: cell;
-
+  color: ${props => props.theme.primary};
   @keyframes float {
     from {
       transform: rotate(5deg);
@@ -59,10 +59,10 @@ export const NameWrapper = styled.h1`
 export const ButtonWrapper = styled.a`
   margin: 40px;
   text-decoration: none;
-  color: white;
+  color: ${props => props.theme.primary};
   font-family: sans-serif;
   font-size: 25px;
-  border: 3px solid white;
+  border: 1px solid ${props => props.theme.primary};
   border-radius: 10px;
   padding: 15px 25px;
   position: relative;
@@ -75,7 +75,7 @@ export const ButtonWrapper = styled.a`
   }
   &:before {
     content: "";
-    background: red;
+    background: ${darken(0.04, "#0091cf")};
     position: absolute;
     top: 0;
     left: 0;
@@ -90,7 +90,7 @@ export const ButtonWrapper = styled.a`
     width: 100%;
     transform: skew(0deg);
     animation: none;
-    background: darkgoldenrod;
+    background: ${props => props.theme.background};
   }
   @keyframes moving {
     from {
@@ -123,6 +123,8 @@ export const AWrapper = styled.a`
   margin: 0 20px;
   box-shadow: 0 15px 10px #777;
   margin: 10px;
+  transition: 500ms all;
+  color: white;
   &:hover {
     cursor: pointer;
   }

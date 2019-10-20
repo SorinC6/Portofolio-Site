@@ -8,7 +8,14 @@ import Navigation from "./components/NavBar/Navigation";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+
+const theme = {
+  primary: "#f0ece9",
+  secondary: "#666564",
+  h2: "#666564",
+  background: "#0091cf"
+};
 
 function App() {
   const initialValue = {
@@ -20,15 +27,17 @@ function App() {
 
   return (
     <div>
-      <Context.Provider value={{ state, dispatch }}>
-        <Home />
-        <St>
-          <Navigation />
-        </St>
-        <About />
-        <Projects />
-        <Contact />
-      </Context.Provider>
+      <ThemeProvider theme={theme}>
+        <Context.Provider value={{ state, dispatch }}>
+          <Home />
+          <St>
+            <Navigation />
+          </St>
+          <About />
+          <Projects />
+          <Contact />
+        </Context.Provider>
+      </ThemeProvider>
     </div>
   );
 }

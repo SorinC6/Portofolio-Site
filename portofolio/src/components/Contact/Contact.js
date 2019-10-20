@@ -2,7 +2,13 @@ import React, { Component } from "react";
 import { Element } from "react-scroll";
 import Slide from "react-reveal/Slide";
 import axios from "axios";
-import { ContactWrapper, Form, SocialWrapper, AWrapper } from "./ContactStyles";
+import {
+  ContactWrapper,
+  Form,
+  SocialWrapper,
+  AWrapper,
+  ButtonWrapper
+} from "./ContactStyles";
 import { Button, Header, Modal } from "semantic-ui-react";
 
 class Contact extends Component {
@@ -96,8 +102,8 @@ class Contact extends Component {
       <Element name="Contact">
         <ContactWrapper>
           <Slide top>
-            <h3>Contact Me</h3>
-            <h4>Interest in working thogether?</h4>
+            <h3>Contact</h3>
+            {/* <h4>Interest in working thogether?</h4> */}
           </Slide>
 
           <Form onSubmit={this.sendMessage}>
@@ -123,16 +129,16 @@ class Contact extends Component {
                 name="message"
                 value={this.state.message}
               />
-              <Button
+              <ButtonWrapper
                 inverted
-                color="blue"
+                color={props => props.theme.projectNav}
                 type="submit"
                 size="huge"
                 fluid
                 loading={this.state.loading}
               >
                 Send Message
-              </Button>
+              </ButtonWrapper>
             </Slide>
           </Form>
           <Slide bottom>

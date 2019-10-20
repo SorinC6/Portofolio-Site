@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { Button } from "semantic-ui-react";
 export const ContactWrapper = styled.div`
   @import url("https://fonts.googleapis.com/css?family=Monda|Special+Elite&display=swap");
   font-family: "Special Elite", cursive;
@@ -13,6 +13,7 @@ export const ContactWrapper = styled.div`
   h3 {
     margin: 0;
     margin-top: 80px;
+    font-size: 33px;
   }
   h4 {
     margin: 0;
@@ -56,6 +57,7 @@ export const Form = styled.form`
     margin-bottom: 10px;
     width: 60%;
     outline: none;
+    border-radius: 10px;
 
     @media (max-width: 500px) {
       margin: 10px 0;
@@ -88,4 +90,10 @@ export const AWrapper = styled.a`
   padding: 10px 20px;
   margin: 0 20px;
   box-shadow: 0 15px 10px #777;
+`;
+
+export const ButtonWrapper = styled(Button)`
+  &:hover {
+    color: ${props => props.theme.background};
+  }
 `;

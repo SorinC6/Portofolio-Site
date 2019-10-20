@@ -8801,6 +8801,13 @@ react-modal@^3.8.1:
     react-lifecycles-compat "^3.0.0"
     warning "^3.0.0"
 
+react-native-bouncing-ball@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/react-native-bouncing-ball/-/react-native-bouncing-ball-0.1.1.tgz#ed0fa4a9f107586110948dc6667c9bbe2a587faf"
+  integrity sha512-s2yZSFT17qTyVBQvm49P/btpAOsknf7+DwNd/I2tlaFjMmFwIeZeKpR+tz51pAs9QcwPDx6rBzfIZuc67ZnzyQ==
+  dependencies:
+    prop-types "^15.6.2"
+
 react-particles-js@^2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/react-particles-js/-/react-particles-js-2.6.0.tgz#159b657a1c2110e9350db5473a8d77b5fc0b52a0"

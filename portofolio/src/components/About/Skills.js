@@ -23,6 +23,5 @@ export default Skills;
 const SkillsWrapper = styled.div`
   width: 70px;
   margin: 10px;
-
-
+  position: relative;
 `;

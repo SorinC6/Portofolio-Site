@@ -96,7 +96,7 @@ const CostumLink = styled(Link)`
     left: 0;
     width: 100%;
     height: 3%;
-    background-color: red;
+    background-color: ${props => props.theme.background};
     transform: scaleX(0);
     transition: all 0.5s;
     transform-origin: left;
@@ -108,7 +108,7 @@ const CostumLink = styled(Link)`
     left: 0;
     width: 100%;
     height: 4%;
-    background-color: red;
+    background-color: ${props => props.theme.background};
     transform: scaleX(0);
     transition: all 0.5s;
     transform-origin: right;

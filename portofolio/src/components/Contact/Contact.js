@@ -155,7 +155,7 @@ class Contact extends Component {
             </SocialWrapper>
           </Slide>
           <Slide bottom>
-            <p>- Chis Sorin Portofolo Site -</p>
+            <p>- Chis Sorin Portfolio Site -</p>
           </Slide>
           <Modal open={this.state.openModal} basic size="small">
             <Header icon="talk" content={this.state.modalTitle} />

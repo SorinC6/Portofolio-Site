@@ -1,6 +1,5 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Element } from "react-scroll";
-import Context from "../context";
 import profileImg from "../assets/profile.jpg";
 import Flip from "react-reveal/Flip";
 import Icon from "./Icon";

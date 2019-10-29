@@ -10,6 +10,7 @@
     "react-circular-progressbar": "^2.0.1",
     "react-dom": "^16.8.6",
     "react-in-viewport": "^1.0.0-alpha.9",
+    "react-metaballs-js": "^2.0.0",
     "react-modal": "^3.8.1",
     "react-native-bouncing-ball": "^0.1.1",
     "react-particles-js": "^2.6.0",

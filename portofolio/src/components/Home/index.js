@@ -64,14 +64,15 @@ const Home = () => {
     setPosition(Number(scrolled.toFixed(3)));
   };
 
-  let prev = window.scrollY;
+  var prev = window.scrollY;
   const handleScrollDirection = e => {
+    console.log(e.currentTarget);
     const window = e.currentTarget;
     //console.log(prev);
-    if (prev > window.scrollY) {
+    if (prev > window.scrollY + 5) {
       //console.log("scrolling up");
       setScrollUp(true);
-    } else if (prev < window.scrollY) {
+    } else if (prev < window.scrollY - 5) {
       setScrollUp(false);
     }
 

@@ -7,6 +7,7 @@ import PDF from "../PdfComponent/PDF";
 import Skills from "./Skills";
 import Particles from "../Particles/index";
 import handleViewport from "react-in-viewport";
+// import Metaballs from "react-metaballs-js";
 
 import {
   AboutWrapper,

@@ -10,12 +10,13 @@ import soupb from "../assets/soupb.png";
 import shop from "../assets/shop-phones.png";
 import animation from "../assets/animation.png";
 import { ProjectsWrapper, CardsWrapper } from "./ProjectStyles";
+import TestCard from "./TestCard";
 
 const Projects = () => {
   return (
     <Element name="Projects">
       <ProjectsWrapper>
-        <h4>Projects</h4>
+        c <h4>Projects</h4>
         <BigProjectCard
           deployment="https://niyonapp.com/"
           gitHubLink="https://github.com/labseu2-niyon"

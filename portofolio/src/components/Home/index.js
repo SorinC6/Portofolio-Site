@@ -66,7 +66,6 @@ const Home = () => {
 
   var prev = window.scrollY;
   const handleScrollDirection = e => {
-    console.log(e.currentTarget);
     const window = e.currentTarget;
     //console.log(prev);
     if (prev > window.scrollY + 5) {

@@ -11,7 +11,7 @@ const Navigation = () => {
   return (
     <Element name="NavBar">
       <LightSpeed cascade>
-        <NavWrapper color={state.navColor} height={state.height}>
+        <NavWrapper c={state.navColor} height={state.height}>
           <NavContainer>
             <CostumLink
               activeClass="active"
@@ -19,7 +19,6 @@ const Navigation = () => {
               spy={true}
               smooth={true}
               duration={500}
-              color={props => props.theme.primary}
             >
               Home
             </CostumLink>
@@ -29,7 +28,6 @@ const Navigation = () => {
               spy={true}
               smooth={true}
               duration={500}
-              color={props => props.theme.primary}
             >
               About
             </CostumLink>
@@ -39,7 +37,6 @@ const Navigation = () => {
               spy={true}
               smooth={true}
               duration={500}
-              color={props => props.theme.primary}
             >
               Projects
             </CostumLink>
@@ -49,7 +46,6 @@ const Navigation = () => {
               spy={true}
               smooth={true}
               duration={500}
-              color={props => props.theme.primary}
             >
               Contact
             </CostumLink>
@@ -69,7 +65,7 @@ const NavWrapper = styled.div`
   /* border-bottom: 3px dotted #e5e5e5; */
   box-shadow: 0px 4px 7px #777;
   z-index: 200;
-  background-color: ${props => props.color};
+  background-color: ${props => props.c};
   transition: 1s all;
 `;
 

@@ -9,10 +9,12 @@ import soupb from "../assets/soupb.png";
 import shop from "../assets/shop-phones.png";
 import animation from "../assets/animation.png";
 import { ProjectsWrapper, CardsWrapper, TextWrap } from "./ProjectStyles";
+import Particles from "../Particles/index";
 
 const Projects = () => {
   return (
     <Element name="Projects">
+      <Particles />
       <ProjectsWrapper>
         <TextWrap>
           <ul>
@@ -33,13 +35,14 @@ const Projects = () => {
           text="Niyon is an online platform that aims to connect young coders with mentors. 
           Starting a job in a new location or new industry is extremely difficult. 
           Niyon helps young professionals increase their confidence skills, meet colleagues in a new location and find support to help them develop the skills needed for their coding career."
-          background="#348FBB"
+          background="darkblue"
           video="https://www.youtube.com/watch?v=4YFwmw08nzA&amp=&feature=youtu.be"
         />
         <BigProjectCard
           deployment="https://unsilenced.space/"
           gitHubLink="https://github.com/unsilenced-project"
           title="Unsilenced"
+          background="darkred"
           text="Comments disabled? Not anymore. Take back the conversation with your
           own Unsilenced Space. Add a simple link to your youtube video
           description to provide an enhanced viewing experience for your
@@ -103,6 +106,7 @@ const Projects = () => {
           />
         </CardsWrapper>
       </ProjectsWrapper>
+      <Particles />
     </Element>
   );
 };

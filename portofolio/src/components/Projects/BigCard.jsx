@@ -12,10 +12,10 @@ const BigCard = ({
   video
 }) => {
   return (
-    <MissionContainer background={background}>
+    <MissionContainer>
       <Flip bottom>
         <Article>
-          <Title>={title}</Title>
+          <Title background={background}>={title}</Title>
           <p>{text}</p>
           <GetStarted href={deployment} target="_blank">
             View Project
@@ -54,16 +54,17 @@ const MissionContainer = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${props =>
-    props.background ? props.background : "darkred"};
+
   flex-wrap: nowrap;
   max-width: 65%;
   height: 100%;
   margin-top: 50px;
   border-radius: 8px;
   box-shadow: 0 20px 50px rgba(123, 122, 170, 0.7);
-
   transition: all 500ms;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2/rip.svg) bottom
+    center;
+  background-size: 150%;
 
   @media (max-width: 800px) {
     height: 100%;
@@ -94,6 +95,7 @@ const Article = styled.article`
     text-align: justify;
     padding-top: 1rem;
     font-size: 1.1rem;
+
     @media (max-width: 500px) {
       width: 250px;
     }
@@ -108,6 +110,7 @@ const Article = styled.article`
     padding-bottom: 2rem;
     font-size: 3rem;
     font-weight: bold;
+
     &::after {
       content: " ";
       position: absolute;
@@ -164,6 +167,7 @@ const Title = styled.div`
   font-size: 30px;
   letter-spacing: 15px;
   padding: 20px;
+  color: ${props => props.background};
 
   @media (max-width: 800px) {
     font-size: 17px;

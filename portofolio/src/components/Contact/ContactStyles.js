@@ -10,6 +10,7 @@ export const ContactWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  position: relative;
   h3 {
     margin: 0;
     margin-top: 80px;
@@ -27,6 +28,9 @@ export const Form = styled.form`
   width: 70%;
   margin: 0 auto;
   padding: 20px;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2/rip.svg) bottom
+    center;
+  background-size: 150%;
 
   @media (max-width: 500px) {
     padding: 20px 0;

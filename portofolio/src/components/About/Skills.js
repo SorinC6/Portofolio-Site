@@ -1,7 +1,6 @@
 import React from "react";
 import { CircularProgressbarWithChildren } from "react-circular-progressbar";
 import Roll from "react-reveal/Roll";
-
 import "react-circular-progressbar/dist/styles.css";
 import styled from "styled-components";
 

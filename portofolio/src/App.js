@@ -19,7 +19,7 @@ const theme = {
   projectBackground: darken(0.1, "#0091cf"),
   projectNav: darken(0.1, "#f0ece9"),
   contactBackground: darken(0.2, "#0091cf"),
-  contactNav: darken(0.2, "#f0ece9")
+  contactNav: darken(0, "#f0ece9")
 };
 
 function App() {

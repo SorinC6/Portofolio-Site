@@ -184,3 +184,54 @@ export const AWrapper = styled.a`
   box-shadow: 0 15px 10px #777;
   transition: 500ms all;
 `;
+
+export const TextWrap = styled.div`
+  ul {
+    display: flex;
+    li {
+      list-style: none;
+      color: lightgrey;
+      font-size: 40px;
+      letter-spacing: 15px;
+      animation: lighting 2s linear infinite;
+      &:nth-child(1) {
+        animation-delay: 0;
+      }
+      &:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+      &:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+      &:nth-child(4) {
+        animation-delay: 0.3s;
+      }
+      &:nth-child(5) {
+        animation-delay: 0.4s;
+      }
+      &:nth-child(6) {
+        animation-delay: 0.5s;
+      }
+      &:nth-child(8) {
+        animation-delay: 0.7s;
+      }
+      &:nth-child(9) {
+        animation-delay: 0.8s;
+      }
+    }
+  }
+  @keyframes lighting {
+    0% {
+      color: grey;
+      text-shadow: none;
+    }
+    90% {
+      color: grey;
+      text-shadow: none;
+    }
+    100% {
+      color: yellow;
+      text-shadow: 0 0 7px #fff900, 0 0 50px #ff6c00;
+    }
+  }
+`;

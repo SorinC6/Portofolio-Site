@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Blob } from "react-blob";
 
 export const AboutWrapper = styled.div`
   @import url("https://fonts.googleapis.com/css?family=Signika&display=swap");
@@ -18,17 +19,10 @@ export const ContentWrapper = styled.div`
   align-items: center;
 `;
 
-export const ProfileImg = styled.img`
+export const ProfileImg = styled(Blob)`
   border-radius: 50%;
   width: 200px;
   transition: transform 1s;
-
-  &:hover {
-    transform: scale(1.2) rotate(9deg);
-    @media (max-width: 400px) {
-      transform: none;
-    }
-  }
 `;
 
 export const Description = styled.div`

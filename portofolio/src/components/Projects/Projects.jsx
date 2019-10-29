@@ -8,13 +8,24 @@ import soup from "../assets/soup.png";
 import soupb from "../assets/soupb.png";
 import shop from "../assets/shop-phones.png";
 import animation from "../assets/animation.png";
-import { ProjectsWrapper, CardsWrapper } from "./ProjectStyles";
+import { ProjectsWrapper, CardsWrapper, TextWrap } from "./ProjectStyles";
 
 const Projects = () => {
   return (
     <Element name="Projects">
       <ProjectsWrapper>
-        <h4>Projects</h4>
+        <TextWrap>
+          <ul>
+            <li>P</li>
+            <li>R</li>
+            <li>O</li>
+            <li>J</li>
+            <li>E</li>
+            <li>C</li>
+            <li>T</li>
+            <li>S</li>
+          </ul>
+        </TextWrap>
         <BigProjectCard
           deployment="https://niyonapp.com/"
           gitHubLink="https://github.com/labseu2-niyon"

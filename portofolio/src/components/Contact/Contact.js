@@ -7,7 +7,8 @@ import {
   Form,
   SocialWrapper,
   AWrapper,
-  ButtonWrapper
+  ButtonWrapper,
+  TextWrap
 } from "./ContactStyles";
 import { Header, Modal } from "semantic-ui-react";
 
@@ -102,7 +103,17 @@ class Contact extends Component {
       <Element name="Contact">
         <ContactWrapper>
           <Slide top>
-            <h3>Contact</h3>
+            <TextWrap>
+              <ul>
+                <li>C</li>
+                <li>O</li>
+                <li>N</li>
+                <li>T</li>
+                <li>A</li>
+                <li>C</li>
+                <li>T</li>
+              </ul>
+            </TextWrap>
             {/* <h4>Interest in working thogether?</h4> */}
           </Slide>
 

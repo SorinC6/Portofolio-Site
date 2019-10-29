@@ -9,7 +9,7 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import styled, { ThemeProvider } from "styled-components";
-import { lighten, darken } from "polished";
+import { darken } from "polished";
 
 const theme = {
   primary: "#f0ece9",

@@ -26,7 +26,7 @@ const ModalComponent = ({
       ariaHideApp={false}
     >
       <ModalContent href={link}>
-        <a href={link} target="_blank">
+        <a href={link} target="_blank" rel="noopener noreferrer">
           <img src={img} alt="imagine" />
           <h4>{title}</h4>
           <p>{description}</p>

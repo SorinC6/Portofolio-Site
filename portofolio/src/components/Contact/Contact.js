@@ -9,7 +9,7 @@ import {
   AWrapper,
   ButtonWrapper
 } from "./ContactStyles";
-import { Button, Header, Modal } from "semantic-ui-react";
+import { Header, Modal } from "semantic-ui-react";
 
 class Contact extends Component {
   state = {
@@ -131,7 +131,7 @@ class Contact extends Component {
               />
               <ButtonWrapper
                 inverted
-                color={props => props.theme.projectNav}
+                // color={props => props.theme.projectNav}
                 type="submit"
                 size="huge"
                 fluid

@@ -1,4 +1,4 @@
-import React, { Component, useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Element, scroller } from "react-scroll";
 import Particles from "../Particles/index";
 import Flip from "react-reveal/Flip";
@@ -15,7 +15,7 @@ import {
 const Home = () => {
   const [theposition, setPosition] = useState(0);
   const [scrollUp, setScrollUp] = useState(false);
-  const { state, dispatch } = useContext(Context);
+  const { dispatch } = useContext(Context);
 
   useEffect(() => {
     window.addEventListener("scroll", listenToScroll);

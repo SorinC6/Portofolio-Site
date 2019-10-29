@@ -1,6 +1,5 @@
-import React, { useEffect, useContext } from "react";
+import React from "react";
 import { Element } from "react-scroll";
-import Context from "../context";
 import ProjectCard from "./ProjectCard";
 import BigProjectCard from "./BigCard";
 import testImg from "../assets/test.png";
@@ -10,7 +9,6 @@ import soupb from "../assets/soupb.png";
 import shop from "../assets/shop-phones.png";
 import animation from "../assets/animation.png";
 import { ProjectsWrapper, CardsWrapper } from "./ProjectStyles";
-import TestCard from "./TestCard";
 
 const Projects = () => {
   return (

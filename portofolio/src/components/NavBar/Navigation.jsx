@@ -5,7 +5,7 @@ import LightSpeed from "react-reveal/LightSpeed";
 import Context from "../context";
 
 const Navigation = () => {
-  const { state, dispatch } = useContext(Context);
+  const { state } = useContext(Context);
   //console.log(state);
 
   return (

@@ -1,7 +1,6 @@
 import React from "react";
 import { Element } from "react-scroll";
 import ProjectCard from "./ProjectCard";
-import BigProjectCard from "./BigCard";
 import testImg from "../assets/test.png";
 import npmpackage from "../assets/npmpackage.png";
 import soupb from "../assets/soupb.png";

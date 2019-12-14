@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <Element name="Home">
       <HomeWrapper>
-        {/* <Particles /> */}
+        <Particles />
         <TextWrapper>
           <Flip left>
             <NameWrapper>Sorin Chis</NameWrapper>

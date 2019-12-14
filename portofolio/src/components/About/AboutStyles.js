@@ -139,7 +139,6 @@ export const SkillsWrapper = styled.div`
   width: 100%;
   margin-top: 100px;
   background-color: ${props => props.theme.background};
-  border: 1px solid black;
   color: white;
   opacity: 0.9;
   padding: 20px 10px;

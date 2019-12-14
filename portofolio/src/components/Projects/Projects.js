@@ -17,6 +17,7 @@ import niyonUrl from "../assets/niyonURL.png";
 import unsilencedURL from "../assets/unsilencedURL.png";
 import GeoappURL from "../assets/geoappURL.png";
 import PizzaURL from "../assets/wooppizza.png";
+import Gatsbyblog from "../assets/gatsbyblog.png";
 import Card from "./Card";
 
 const Projects = () => {
@@ -45,6 +46,15 @@ const Projects = () => {
             point1="Construct components using Styled Components and costum hooks for managing the state"
             point2="Using Firebase to Authenticate users with Google to login  and logout "
             backgroundImg={PizzaURL}
+          />
+          <Card
+            deployment="https://woopblog.netlify.com/"
+            gitHubLink="https://github.com/SorinC6/gatsby-blog"
+            title="Gatsby Blog"
+            text="Gatsby Template Blog with Netlify CMS integration"
+            point1="Experiment with JAM stack and learn more about how Gatsby works"
+            point2=""
+            backgroundImg={Gatsbyblog}
           />
           <Card
             deployment="https://niyonapp.com/"

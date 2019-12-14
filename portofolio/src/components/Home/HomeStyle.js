@@ -3,6 +3,7 @@ import { darken } from "polished";
 export const HomeWrapper = styled.div`
   background: ${props => props.theme.background};
   height: 100vh;
+  position: relative;
 `;
 
 export const TextWrapper = styled.div`
@@ -126,6 +127,35 @@ export const AWrapper = styled.a`
   margin: 10px;
   transition: 500ms all;
   color: white;
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+export const ProjectPreview = styled.div`
+  position: absolute;
+  right: 5%;
+  top: 30%;
+  margin-top: ${props => props.top};
+  transform: rotate(12deg);
+  font-weight: 700;
+  padding: 0.25rem 1rem;
+  text-transform: uppercase;
+  font-family: "Courier";
+  -webkit-mask-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png");
+  -webkit-mask-size: 944px 604px;
+  mix-blend-mode: multiply;
+
+  color: grey;
+  border: 0.5rem solid grey;
+  -webkit-mask-position: 13rem 6rem;
+  transform: rotate(-14deg);
+  border-radius: 0;
+
+  h4 {
+    font-size: 30px;
+  }
+
   &:hover {
     cursor: pointer;
   }

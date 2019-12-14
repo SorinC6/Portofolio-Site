@@ -2,6 +2,7 @@ import React from "react";
 import { Element, scroller } from "react-scroll";
 import Particles from "../Particles/index";
 import Flip from "react-reveal/Flip";
+import ProjectPreview from "./ProjectPreview";
 import {
   HomeWrapper,
   TextWrapper,
@@ -38,6 +39,8 @@ const Home = () => {
             <i className="fab fa-linkedin" />
           </AWrapper>
         </SocialWrapper>
+        <ProjectPreview title="Pizza-App" top="0px" />
+        <ProjectPreview title="Gatsby Blog" top="130px" />
       </HomeWrapper>
     </Element>
   );

@@ -24,6 +24,8 @@ const Wrapper = styled.div`
   position: relative;
   margin-top: 20px;
   z-index: -10;
+  font-family: "Signika", sans-serif;
+
   p:nth-of-type(1) {
     margin-top: 20px;
     font-size: 20px;

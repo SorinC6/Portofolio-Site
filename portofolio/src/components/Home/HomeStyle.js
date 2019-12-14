@@ -6,9 +6,8 @@ export const HomeWrapper = styled.div`
 `;
 
 export const TextWrapper = styled.div`
-  @import url("https://fonts.googleapis.com/css?family=Monda|Special+Elite&display=swap");
-  font-family: "Special Elite", cursive;
   display: flex;
+  font-family: Arial, Helvetica, sans-serif;
   flex-direction: column;
   align-items: center;
   position: relative;
@@ -69,6 +68,8 @@ export const ButtonWrapper = styled.a`
   z-index: 1;
   overflow: hidden;
   transition: 1s border-radius;
+  font-family: Arial, Helvetica, sans-serif;
+
   &:hover {
     border-radius: 20px;
     cursor: pointer;

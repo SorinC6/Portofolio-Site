@@ -10,11 +10,12 @@ import shop from "../assets/shop-phones.png";
 import animation from "../assets/animation.png";
 import { ProjectsWrapper, CardsWrapper, TextWrap } from "./ProjectStyles";
 import Particles from "../Particles/index";
+import niyonUrl from '../assets/niyonURL.png'
 
 const Projects = () => {
   return (
     <Element name="Projects">
-      <Particles />
+      {/* <Particles /> */}
       <ProjectsWrapper>
         <TextWrap>
           <ul>
@@ -36,6 +37,7 @@ const Projects = () => {
           Starting a job in a new location or new industry is extremely difficult. 
           Niyon helps young professionals increase their confidence skills, meet colleagues in a new location and find support to help them develop the skills needed for their coding career."
           background="darkblue"
+          backgroundImg={niyonUrl}
           video="https://www.youtube.com/watch?v=4YFwmw08nzA&amp=&feature=youtu.be"
         />
         <BigProjectCard
@@ -106,7 +108,6 @@ const Projects = () => {
           />
         </CardsWrapper>
       </ProjectsWrapper>
-      <Particles />
     </Element>
   );
 };

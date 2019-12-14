@@ -11,7 +11,7 @@ const Navigation = () => {
   return (
     <Element name="NavBar">
       <LightSpeed cascade>
-        <NavWrapper c={state.navColor} height={state.height}>
+        <NavWrapper height={state.height}>
           <NavContainer>
             <CostumLink
               activeClass="active"
@@ -59,25 +59,26 @@ const Navigation = () => {
 export default Navigation;
 
 const NavWrapper = styled.div`
+  display:flex;
+  justify-content:flex-end;
   max-width: 100%;
-  height: ${props => props.height};
-  /* background: #ffc21c; */
-  /* border-bottom: 3px dotted #e5e5e5; */
+  height: 50px;
   box-shadow: 0px 4px 7px #777;
   z-index: 200;
-  background-color: ${props => props.c};
+  background-color: white;
   transition: 1s all;
 `;
 
 const NavContainer = styled.div`
   display: flex;
-  max-width: 500px;
+  width: 500px;
   justify-content: space-evenly;
   align-items: center;
   height: 100%;
-  margin: 0 auto;
   position: relative;
   transition: 1s all;
+  font-family: "Special Elite", cursive;
+
 `;
 
 const CostumLink = styled(Link)`

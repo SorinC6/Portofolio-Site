@@ -10,6 +10,7 @@ export const AboutWrapper = styled.div`
   h3 {
     font-size: 30px;
     margin: 20px;
+    font-family: "Signika", sans-serif;
   }
 `;
 
@@ -42,6 +43,7 @@ export const TextContainer = styled.div`
   flex-direction: column;
   max-width: 55%;
   align-items: center;
+  
   @media (max-width: 800px) {
     max-width: 100%;
     text-align: justify;

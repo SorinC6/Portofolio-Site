@@ -56,7 +56,7 @@ const About = props => {
             </TextContainer>
           </Description>
           <SkillsWrapper>
-            <Particles />
+            {/* <Particles /> */}
             <Skills name="js" />
             <Skills name="react" />
             <Skills name="node" />

@@ -43,7 +43,7 @@ export const TextContainer = styled.div`
   flex-direction: column;
   max-width: 55%;
   align-items: center;
-  
+
   @media (max-width: 800px) {
     max-width: 100%;
     text-align: justify;
@@ -89,6 +89,10 @@ export const ResumeButton = styled.a`
 export const BuildWrapper = styled.div`
   width: 100%;
   margin-top: 50px;
+
+  @media (max-width: 400px) {
+    display: none;
+  }
 `;
 
 export const TextSwitch = styled.h1`

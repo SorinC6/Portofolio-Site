@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { SocialWrapper, AWrapper } from "./ProjectStyles";
 
 const Card = ({
   backgroundImg,
@@ -12,7 +11,6 @@ const Card = ({
   point1,
   point2
 }) => {
-  console.log(backgroundImg);
   return (
     <>
       <CardWrapper bg={backgroundImg}>
@@ -25,7 +23,6 @@ const Card = ({
               Video
             </VideoWrapper>
           )}
-
           <h1>{title}</h1>
           <Social>
             <a href={gitHubLink} target="_blank" rel="noopener noreferrer">
@@ -39,7 +36,14 @@ const Card = ({
         {/* <span bg={backgroundImg} /> */}
         <div>
           {/* <h1>{title}</h1> */}
-          <p>{text}</p>
+          <p>
+            <span role="img" aria-label="emoji">
+              ☝
+            </span>{" "}
+            {text}
+          </p>
+          <p>‣ {point1}</p>
+          <p>‣ {point2}</p>
         </div>
       </CardWrapper>
     </>
@@ -50,13 +54,23 @@ export default Card;
 
 const CardWrapper = styled.div`
   margin: 20px;
-  width: 550px;
+  width: 560px;
   height: 380px;
   /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
+
+  @media (max-width: 600px) {
+    margin: 20px;
+    width: 450px;
+  }
+
+  @media (max-width: 400px) {
+    margin: 20px;
+    width: 350px;
+  }
   img {
     max-width: 100%;
     height: 400px;
@@ -66,12 +80,15 @@ const CardWrapper = styled.div`
     div:first-child {
       background: rgba(0, 109, 156, 0.95);
     }
-    i {
+    i,
+    a {
       visibility: visible;
     }
 
-    a {
-      visibility: visible;
+    div {
+      -webkit-box-shadow: -4px 18px 34px -10px rgba(99, 94, 99, 1);
+      -moz-box-shadow: -4px 18px 34px -10px rgba(99, 94, 99, 1);
+      box-shadow: -4px 18px 34px -10px rgba(99, 94, 99, 1);
     }
   }
 
@@ -80,7 +97,7 @@ const CardWrapper = styled.div`
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 40%;
+    height: 45%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -97,7 +114,7 @@ const CardWrapper = styled.div`
     transform: translateY(0);
   }
   &:hover img {
-    transform: translateY(-50%);
+    transform: translateY(-52%);
   }
 `;
 

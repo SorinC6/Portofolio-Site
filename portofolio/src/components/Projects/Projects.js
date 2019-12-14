@@ -3,14 +3,20 @@ import { Element } from "react-scroll";
 import ProjectCard from "./ProjectCard";
 import BigProjectCard from "./BigCard";
 import testImg from "../assets/test.png";
-import book from "../assets/book.png";
-import soup from "../assets/soup.png";
+import npmpackage from "../assets/npmpackage.png";
 import soupb from "../assets/soupb.png";
 import shop from "../assets/shop-phones.png";
 import animation from "../assets/animation.png";
-import { ProjectsWrapper, CardsWrapper, TextWrap } from "./ProjectStyles";
+import {
+  ProjectsWrapper,
+  CardsWrapper,
+  TextWrap,
+  CardGrid
+} from "./ProjectStyles";
 import Particles from "../Particles/index";
 import niyonUrl from "../assets/niyonURL.png";
+import unsilencedURL from "../assets/unsilencedURL.png";
+import GeoappURL from "../assets/geoappURL.png";
 import Card from "./Card";
 
 const Projects = () => {
@@ -30,67 +36,46 @@ const Projects = () => {
             <li>S</li>
           </ul>
         </TextWrap>
-        <Card
-          deployment="https://niyonapp.com/"
-          gitHubLink="https://github.com/labseu2-niyon"
-          title="Niyon"
-          text="Niyon is an online platform that aims to connect young coders with mentors."
-          point1="Implemented user authentication on frontend using JWT, Redux Persist to gather user information across multiple pages and chat functionality using socket.io"
-          point2="Construct and design components for authentication, chat and edit profile in React. Managing application state using Redux"
-          background="darkblue"
-          backgroundImg={niyonUrl}
-          video="https://www.youtube.com/watch?v=4YFwmw08nzA&amp=&feature=youtu.be"
-        />
-        <BigProjectCard
-          deployment="https://niyonapp.com/"
-          gitHubLink="https://github.com/labseu2-niyon"
-          title="Niyon"
-          text="Niyon is an online platform that aims to connect young coders with mentors. 
-          Starting a job in a new location or new industry is extremely difficult. 
-          Niyon helps young professionals increase their confidence skills, meet colleagues in a new location and find support to help them develop the skills needed for their coding career."
-          background="darkblue"
-          backgroundImg={niyonUrl}
-          video="https://www.youtube.com/watch?v=4YFwmw08nzA&amp=&feature=youtu.be"
-        />
-        <BigProjectCard
-          deployment="https://unsilenced.space/"
-          gitHubLink="https://github.com/unsilenced-project"
-          title="Unsilenced"
-          background="darkred"
-          text="Comments disabled? Not anymore. Take back the conversation with your
-          own Unsilenced Space. Add a simple link to your youtube video
-          description to provide an enhanced viewing experience for your
-          visitors, complete with comments. Moderated and unmoderated options
-          available."
-        />
-        <BigProjectCard
-          deployment="https://geoapp-mbc2dr3be.now.sh"
-          gitHubLink="https://github.com/SorinC6/GeoApp"
-          title="GeoApp"
-          text="GeaApp is a live geolocation application where users can 'pin' different locations on the map and share their own content with other users in realtime to share pictures, reviews of the location and area, interact with other users by adding comments to their pins, and manage the pins they've created."
-          background="purple"
-        />
-        <BigProjectCard
-          deployment="https://www.npmjs.com/package/error-express-handler"
-          gitHubLink="https://github.com/SorinC6/error-handler-express"
-          title="NPM Package"
-          text="Error-Express-Handler is a easy middleware with build in errors messages for the most commun http errors in an express application. Using this package the user no longer have to put the code status and the message for the error"
-          background="darkblue"
-        />
+        <CardGrid>
+          <Card
+            deployment="https://niyonapp.com/"
+            gitHubLink="https://github.com/labseu2-niyon"
+            title="Niyon"
+            text="Niyon is an online platform that aims to connect young coders with mentors."
+            point1="Implemented user authentication on frontend using JWT, Redux Persist to gather user information across multiple pages and chat functionality using socket.io"
+            point2="Construct and design components for authentication, chat and edit profile in React. Managing application state using Redux"
+            background="darkblue"
+            backgroundImg={niyonUrl}
+            video="https://www.youtube.com/watch?v=4YFwmw08nzA&amp=&feature=youtu.be"
+          />
+          <Card
+            deployment="https://unsilenced.space/"
+            gitHubLink="https://github.com/unsilenced-project"
+            title="Unsilenced"
+            text="Comments disabled? Not anymore. Take back the conversation with your
+          own Unsilenced Space"
+            point1="Design RESTful backend server using Node and Express with a SQLite database. Implemented user authentication with JWT (backend+frontend)."
+            point2="Build and design RESTful API endpoints and multiple React components from scratch using styled-components."
+            backgroundImg={unsilencedURL}
+          />
+          <Card
+            deployment="https://geoapp-mbc2dr3be.now.sh"
+            gitHubLink="https://github.com/SorinC6/GeoApp"
+            title="GeoApp"
+            point2="Worked with Express.js, MongoDB, GraphQL, Apollo Client,Google OAuth2, Cloudinary API, MapBox"
+            text="Live geolocation application where users can 'pin' di􏰀erent locations on the map."
+            point1="implemented React Context API to manage the state, bulding the design using material Ui library in React."
+            backgroundImg={GeoappURL}
+          />
+        </CardGrid>
+
         <CardsWrapper>
           <ProjectCard
-            img={book}
-            title="Bookr"
-            description="Pitch: Bookr is your source for all things Text Book. Picture the AirBNB of text books, a social platform for peer reviewed text books. "
-            link="https://goofy-jang-012306.netlify.com/"
-            gitHubLink="https://github.com/SorinC6/Book-Store-App"
-          />
-          <ProjectCard
-            img={soup}
-            title="I'll Serve Soup"
-            description="Pitch: To help those who help feed and assist the less fortunate of our community by providing a way to better organize how they take in and manage perishable and non-perishable items."
-            link="https://gifted-curie-c364f6.netlify.com/"
-            gitHubLink="https://github.com/SorinC6/Serve-Soup-Frontend"
+            img={npmpackage}
+            title="NPM Package"
+            description="Error-Express-Handler is a easy middleware with build in errors messages for the most commun http errors in an express application. Using this package the user no longer have to put the code status and the message for the error"
+            link="https://www.npmjs.com/package/error-express-handler"
+            gitHubLink="https://github.com/SorinC6/error-handler-express"
           />
           <ProjectCard
             img={soupb}

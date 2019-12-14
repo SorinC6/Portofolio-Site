@@ -2,6 +2,17 @@ import styled from "styled-components";
 
 //======================PROJECT STYLES==================
 
+export const CardGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 50px;
+
+  @media (max-width: 1170px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
 export const ProjectsWrapper = styled.div`
   @import url("https://fonts.googleapis.com/css?family=Monda|Special+Elite&display=swap");
   font-family: "Special Elite", cursive;

@@ -30,12 +30,10 @@ const Card = ({
             </a>
           </Social>
         </TopSection>
-        <a href={deployment} target="_blank">
+        <a href={deployment} target="_blank" rel="noopener noreferrer">
           <img src={backgroundImg} alt="" />
         </a>
-        {/* <span bg={backgroundImg} /> */}
         <div>
-          {/* <h1>{title}</h1> */}
           <p>
             <span role="img" aria-label="emoji">
               ☝
@@ -54,7 +52,7 @@ export default Card;
 
 const CardWrapper = styled.div`
   margin: 20px;
-  width: 560px;
+  width: 550px;
   height: 380px;
   /* border: 1px solid black; */
   display: flex;
@@ -70,11 +68,19 @@ const CardWrapper = styled.div`
   @media (max-width: 400px) {
     margin: 20px;
     width: 350px;
+    height: 400px;
+    a,
+    i {
+      visibility: visible !important;
+    }
   }
   img {
     max-width: 100%;
     height: 400px;
     transition: transform 1s;
+    @media (max-width: 400px) {
+      transform: translateY(-52%);
+    }
   }
   &:hover {
     div:first-child {
@@ -106,6 +112,10 @@ const CardWrapper = styled.div`
     background-color: transparent;
     transform: translateY(100%);
     transition: all 1s;
+
+    @media (max-width: 400px) {
+      transform: translateY(0);
+    }
     p {
       max-width: 95%;
     }

@@ -17,6 +17,7 @@ import Particles from "../Particles/index";
 import niyonUrl from "../assets/niyonURL.png";
 import unsilencedURL from "../assets/unsilencedURL.png";
 import GeoappURL from "../assets/geoappURL.png";
+import PizzaURL from "../assets/wooppizza.png";
 import Card from "./Card";
 
 const Projects = () => {
@@ -38,15 +39,22 @@ const Projects = () => {
         </TextWrap>
         <CardGrid>
           <Card
+            deployment="https://pizza-app-8907c.firebaseapp.com/"
+            gitHubLink="https://github.com/SorinC6/pizza-app"
+            title="Woop Pizza"
+            text="For all Pizza Lovers out there"
+            point1="Construct components using Styled Components and costum hooks for managing the state"
+            point2="Using Firebase to Authenticate users with Google to login  and logout "
+            backgroundImg={PizzaURL}
+          />
+          <Card
             deployment="https://niyonapp.com/"
             gitHubLink="https://github.com/labseu2-niyon"
             title="Niyon"
             text="Niyon is an online platform that aims to connect young coders with mentors."
             point1="Implemented user authentication on frontend using JWT, Redux Persist to gather user information across multiple pages and chat functionality using socket.io"
             point2="Construct and design components for authentication, chat and edit profile in React. Managing application state using Redux"
-            background="darkblue"
             backgroundImg={niyonUrl}
-            video="https://www.youtube.com/watch?v=4YFwmw08nzA&amp=&feature=youtu.be"
           />
           <Card
             deployment="https://unsilenced.space/"

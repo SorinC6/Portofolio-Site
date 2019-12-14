@@ -10,12 +10,13 @@ import shop from "../assets/shop-phones.png";
 import animation from "../assets/animation.png";
 import { ProjectsWrapper, CardsWrapper, TextWrap } from "./ProjectStyles";
 import Particles from "../Particles/index";
-import niyonUrl from '../assets/niyonURL.png'
+import niyonUrl from "../assets/niyonURL.png";
+import Card from "./Card";
 
 const Projects = () => {
   return (
     <Element name="Projects">
-      {/* <Particles /> */}
+      <Particles />
       <ProjectsWrapper>
         <TextWrap>
           <ul>
@@ -29,6 +30,17 @@ const Projects = () => {
             <li>S</li>
           </ul>
         </TextWrap>
+        <Card
+          deployment="https://niyonapp.com/"
+          gitHubLink="https://github.com/labseu2-niyon"
+          title="Niyon"
+          text="Niyon is an online platform that aims to connect young coders with mentors."
+          point1="Implemented user authentication on frontend using JWT, Redux Persist to gather user information across multiple pages and chat functionality using socket.io"
+          point2="Construct and design components for authentication, chat and edit profile in React. Managing application state using Redux"
+          background="darkblue"
+          backgroundImg={niyonUrl}
+          video="https://www.youtube.com/watch?v=4YFwmw08nzA&amp=&feature=youtu.be"
+        />
         <BigProjectCard
           deployment="https://niyonapp.com/"
           gitHubLink="https://github.com/labseu2-niyon"

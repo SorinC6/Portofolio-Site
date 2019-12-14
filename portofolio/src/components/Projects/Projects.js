@@ -53,6 +53,7 @@ const Projects = () => {
             text="Niyon is an online platform that aims to connect young coders with mentors."
             point1="Implemented user authentication on frontend using JWT, Redux Persist to gather user information across multiple pages and chat functionality using socket.io"
             point2="Construct and design components for authentication, chat and edit profile in React. Managing application state using Redux"
+            video="https://www.youtube.com/watch?v=4YFwmw08nzA&feature=youtu.be"
             backgroundImg={niyonUrl}
           />
           <Card

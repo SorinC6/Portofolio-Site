@@ -69,6 +69,8 @@ const CardWrapper = styled.div`
     margin: 20px;
     width: 350px;
     height: 400px;
+  }
+  @media (max-width: 700px) {
     a,
     i {
       visibility: visible !important;
@@ -78,7 +80,7 @@ const CardWrapper = styled.div`
     max-width: 100%;
     height: 400px;
     transition: transform 1s;
-    @media (max-width: 400px) {
+    @media (max-width: 700px) {
       transform: translateY(-52%);
     }
   }
@@ -113,7 +115,7 @@ const CardWrapper = styled.div`
     transform: translateY(100%);
     transition: all 1s;
 
-    @media (max-width: 400px) {
+    @media (max-width: 700px) {
       transform: translateY(0);
     }
     p {

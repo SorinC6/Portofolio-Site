@@ -29,7 +29,7 @@ const Home = () => {
             <NameWrapper>Sorin Chis</NameWrapper>
             <h2>Full Stack Developer</h2>
           </Flip>
-          <ButtonWrapper onClick={scrollToAbout}>Click For More</ButtonWrapper>
+          <ButtonWrapper onClick={scrollToAbout}>Learn More</ButtonWrapper>
         </TextWrapper>
         <SocialWrapper>
           <AWrapper href="https://github.com/SorinC6" target="_blank">

@@ -146,6 +146,10 @@ export const ProjectPreview = styled.div`
   -webkit-mask-size: 944px 604px;
   mix-blend-mode: multiply;
 
+  @media (max-width: 800px) {
+    display: none;
+  }
+
   color: grey;
   border: 0.5rem solid grey;
   -webkit-mask-position: 13rem 6rem;

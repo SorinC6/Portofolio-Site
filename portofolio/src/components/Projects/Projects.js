@@ -3,6 +3,7 @@ import { Element } from "react-scroll";
 import ProjectCard from "./ProjectCard";
 import testImg from "../assets/test.png";
 import npmpackage from "../assets/npmpackage.png";
+import gallery from "../assets/gallery.png";
 import soupb from "../assets/soupb.png";
 import shop from "../assets/shop-phones.png";
 import animation from "../assets/animation.png";
@@ -88,6 +89,13 @@ const Projects = () => {
         </CardGrid>
 
         <CardsWrapper>
+          <ProjectCard
+            img={gallery}
+            title="Responsive Image Gallery"
+            description="Responsive Image Gallery using CSS Grid"
+            link="https://sorinc6.github.io/image-gallery/?type=cascade"
+            gitHubLink="https://github.com/SorinC6/image-gallery"
+          />
           <ProjectCard
             img={npmpackage}
             title="NPM Package"

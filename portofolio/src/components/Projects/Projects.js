@@ -69,6 +69,15 @@ const Projects = () => {
             backgroundImg={niyonUrl}
           />
           <Card
+            deployment="https://sorinc6.github.io/crypto-dash/"
+            gitHubLink="https://github.com/SorinC6/crypto-dash"
+            title="Crypto-Dash"
+            text="Cryptocurrency Dashboard - Data Visualization with HighCharts"
+            point1="React & React Context API for state Management ,HighCharts ,Fetch Graphing Historical Price Data using CryptoCompare API"
+            point2="CSS Grid, Styled-components v4, Moment for date maniputation, lodash and local storage for saving favorites coins"
+            backgroundImg={Crypto}
+          />
+          <Card
             deployment="https://unsilenced.space/"
             gitHubLink="https://github.com/unsilenced-project"
             title="Unsilenced"
@@ -86,15 +95,6 @@ const Projects = () => {
             text="Live geolocation application where users can 'pin' di􏰀erent locations on the map."
             point1="implemented React Context API to manage the state, bulding the design using material Ui library in React."
             backgroundImg={GeoappURL}
-          />
-          <Card
-            deployment="https://sorinc6.github.io/crypto-dash/"
-            gitHubLink="https://github.com/SorinC6/crypto-dash"
-            title="Crypto-Dash"
-            text="Cryptocurrency Dashboard - Data Visualization with HighCharts"
-            point1="React & React Context API for state Management ,HighCharts ,Fetch Graphing Historical Price Data using CryptoCompare API"
-            point2="CSS Grid, Styled-components v4, Moment for date maniputation, lodash and local storage for saving favorites coins"
-            backgroundImg={Crypto}
           />
         </CardGrid>
 

@@ -8,7 +8,12 @@ import Skills from "./Skills";
 import Particles from "../Particles/index";
 import handleViewport from "react-in-viewport";
 
-// import Metaballs from "react-metaballs-js";
+import reduxSvg from "../assets/svg/redux.svg";
+import nextSvg from "../assets/svg/next.svg";
+import jsSvg from "../assets/svg/javascript.svg";
+import nodeSvg from "../assets/svg/node.svg";
+import gatsbySvg from "../assets/svg/gatsby.svg";
+import reactSvg from "../assets/svg/react.svg";
 
 import {
   AboutWrapper,
@@ -57,13 +62,15 @@ const About = props => {
           </Description>
           <SkillsWrapper>
             {/* <Particles /> */}
-            <Skills name="js" />
-            <Skills name="react" />
-            <Skills name="node" />
-            {/* <Skills name="Redux" img={reduxlogo} name="Redux" value="85" /> */}
-            <Skills name="java" />
-            <Skills name="html5" />
-            <Skills name="css3" />
+            <Skills name="js" value={jsSvg} />
+            <Skills name="react" value={reactSvg} />
+            <Skills name="redux" value={reduxSvg} />
+            <Skills name="node" value={nodeSvg} />
+            <Skills name="next" value={nextSvg} />
+            <Skills name="gatsby" value={gatsbySvg} />
+            {/* <Skills name="react" value={reactSvg} /> */}
+            {/* <Skills name="html5" />
+            <Skills name="css3" /> */}
           </SkillsWrapper>
           <BuildWrapper>
             <TextSwitch>

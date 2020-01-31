@@ -20,6 +20,7 @@ import GeoappURL from "../assets/geoappURL.png";
 import PizzaURL from "../assets/wooppizza.png";
 import Gatsbyblog from "../assets/gatsbyblog.png";
 import Crypto from "../assets/crypto.png";
+import Codelify from "../assets/codelify.png";
 import Card from "./Card";
 
 const Projects = () => {
@@ -40,6 +41,15 @@ const Projects = () => {
           </ul>
         </TextWrap>
         <CardGrid>
+          <Card
+            deployment="https://codelify.dev/"
+            gitHubLink="https://github.com/Codelify"
+            title="Codelify"
+            text="Your code snippets library"
+            point1="Implemented queries and mutation for Apollo Client"
+            point2="Setting up Context API for managing state - Created Search functionality with match-sorter and downshift"
+            backgroundImg={Codelify}
+          />
           <Card
             deployment="https://pizza-app-8907c.firebaseapp.com/"
             gitHubLink="https://github.com/SorinC6/pizza-app"

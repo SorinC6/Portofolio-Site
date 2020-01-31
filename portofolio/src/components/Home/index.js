@@ -40,7 +40,7 @@ const Home = () => {
           </AWrapper>
         </SocialWrapper>
         <ProjectPreview title="Pizza-App" top="0px" />
-        <ProjectPreview title="Gatsby Blog" top="130px" />
+        <ProjectPreview title="Codelify" top="130px" />
       </HomeWrapper>
     </Element>
   );

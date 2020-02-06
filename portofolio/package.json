@@ -23,7 +23,8 @@
     "react-sticky-el": "^1.0.20",
     "reactstrap": "^8.0.0",
     "semantic-ui-react": "^0.87.2",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.2.0",
+    "typewriter-effect": "^2.12.2"
   },
   "scripts": {
     "start": "react-scripts start",

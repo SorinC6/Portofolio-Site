@@ -3,13 +3,15 @@ import { Element, scroller } from "react-scroll";
 import Particles from "../Particles/index";
 import Flip from "react-reveal/Flip";
 import ProjectPreview from "./ProjectPreview";
+
 import {
   HomeWrapper,
   TextWrapper,
   NameWrapper,
   ButtonWrapper,
   SocialWrapper,
-  AWrapper
+  AWrapper,
+  CostumTypeWritter
 } from "./HomeStyle";
 
 const Home = () => {
@@ -27,7 +29,21 @@ const Home = () => {
         <TextWrapper>
           <Flip left>
             <NameWrapper>Sorin Chis</NameWrapper>
-            <h2>Full Stack Developer</h2>
+            <CostumTypeWritter
+              options={{
+                loop: true,
+                wrapperClassName: "costum"
+              }}
+              onInit={typewriter => {
+                typewriter
+                  .typeString("Full Stack Developer")
+                  .pauseFor(4000)
+                  .deleteAll()
+                  .typeString("Front End Developer")
+                  .pauseFor(4000)
+                  .start();
+              }}
+            />
           </Flip>
           <ButtonWrapper onClick={scrollToAbout}>Learn More</ButtonWrapper>
         </TextWrapper>

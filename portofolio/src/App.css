@@ -2,3 +2,20 @@
   background-color: black;
 }
 
+.costum {
+  font-size: 26px;
+  letter-spacing: 10px;
+  color: #666564;
+  text-align: center;
+  cursor: cell;
+}
+
+.Typewriter {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.Typewriter__cursor {
+  color: #666564;
+  font-size: 24px;
+}

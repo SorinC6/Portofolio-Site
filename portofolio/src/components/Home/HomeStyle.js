@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { darken } from "polished";
+import Typewriter from "typewriter-effect";
+
 export const HomeWrapper = styled.div`
   background: ${props => props.theme.background};
   height: 100vh;
@@ -163,4 +165,8 @@ export const ProjectPreview = styled.div`
   &:hover {
     cursor: pointer;
   }
+`;
+
+export const CostumTypeWritter = styled(Typewriter)`
+  margin-top: 50px;
 `;
